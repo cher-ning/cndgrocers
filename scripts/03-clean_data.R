@@ -1,17 +1,22 @@
 #### Preamble ####
-# Purpose: Cleans the raw plane data recorded by two observers..... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 6 April 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Cleans the raw plane data about grocery store prices obtained from Project Hammer
+# Author: Cher Ning-Li
+# Date: 25 November 2024
+# Contact: cher.ning@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: Have downloaded and unzipped the raw data CSV files from 
+#   Project Hammer, and placed them into data/01-raw_data/.
+#   The `tidyverse` package must be installed.
+# Any other information needed? 
 
 #### Workspace setup ####
 library(tidyverse)
 
 #### Clean data ####
-raw_data <- read_csv("inputs/data/plane_data.csv")
+raw <- read_csv("data/01-raw_data/hammer-4-raw.csv")
+product <- read_csv("data/01-raw_data/hammer-4-product.csv")
+raw_data <- 
+
 
 cleaned_data <-
   raw_data |>

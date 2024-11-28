@@ -6,7 +6,7 @@
 # License: MIT
 # Pre-requisites:
 # - Have downloaded + cleaned data by running 02-clean_data.R
-# - `tidyverse` package must be installed
+# - `tidyverse`, `rstanarm` packages must be installed
 
 
 #### Workspace setup ####

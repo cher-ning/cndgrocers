@@ -1,11 +1,12 @@
 #### Preamble ####
-# Purpose: Tests... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 26 September 2024 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Tests cleaned data
+# Author: Cher Ning-Li
+# Date: 28 November 2024
+# Contact: cher.ning@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites:
+# - Have downloaded + cleaned data by running 02-clean_data.R
+# - `tidyverse` package must be installed
 
 
 #### Workspace setup ####

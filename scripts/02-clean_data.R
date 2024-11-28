@@ -1,5 +1,6 @@
 #### Preamble ####
-# Purpose: Cleans the raw plane data about grocery store prices obtained from Project Hammer
+# Purpose: Cleans the raw plane data about grocery store prices obtained from 
+#   Project Hammer
 # Author: Cher Ning-Li
 # Date: 25 November 2024
 # Contact: cher.ning@mail.utoronto.ca

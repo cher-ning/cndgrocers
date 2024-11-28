@@ -25,7 +25,8 @@ egg_merged <- merged |> janitor::clean_names() |>
   filter(grepl('Dozen|dozen|12', product_name) | grepl('12', units)) |>
   select(nowtime, current_price, old_price, vendor, product_name)
 
-cleaned_data <- egg_merged |> 
+# removes rows that have NA in the current_price column
+cleaned_data <- egg_merged |> drop_na(current_price) |>
   mutate(current_price = as.numeric(current_price))
 
 #### Save data ####

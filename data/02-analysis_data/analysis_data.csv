@@ -219,8 +219,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-07T09:52:00Z,6.08,NA,NoFrills,Grade A Large Brown Eggs
 2024-09-09T13:49:00Z,6.13,NA,NoFrills,Grade A Large Brown Eggs
 2024-09-10T09:11:00Z,6.13,NA,NoFrills,Grade A Large Brown Eggs
-2024-09-11T10:15:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
-2024-09-12T10:51:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
 2024-09-13T10:23:00Z,6.13,NA,NoFrills,Grade A Large Brown Eggs
 2024-09-14T11:00:00Z,6.13,NA,NoFrills,Grade A Large Brown Eggs
 2024-09-15T14:18:00Z,6.13,NA,NoFrills,Grade A Large Brown Eggs
@@ -236,19 +234,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,6.08,NA,NoFrills,Grade A Large Brown Eggs
 2024-03-02T16:06:00Z,6.08,NA,NoFrills,Grade A Large Brown Eggs
 2024-03-03T16:06:00Z,6.08,NA,NoFrills,Grade A Large Brown Eggs
-2024-03-05T16:05:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
-2024-03-06T16:12:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
-2024-03-08T16:05:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
-2024-03-09T16:06:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
-2024-03-10T16:08:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
-2024-03-18T22:53:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
-2024-03-19T09:37:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
-2024-03-20T10:43:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
-2024-03-21T09:37:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
-2024-03-22T10:00:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
-2024-03-23T08:48:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
-2024-03-24T09:42:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
-2024-03-25T07:58:00Z,NA,NA,NoFrills,Grade A Large Brown Eggs
 2024-03-26T09:10:00Z,6.08,NA,NoFrills,Grade A Large Brown Eggs
 2024-03-26T09:30:00Z,6.08,NA,NoFrills,Grade A Large Brown Eggs
 2024-03-27T09:33:00Z,6.08,NA,NoFrills,Grade A Large Brown Eggs
@@ -414,7 +399,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:11:00Z,7.83,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
 2024-09-09T14:23:00Z,7.83,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
 2024-09-10T09:51:00Z,7.83,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
-2024-09-12T11:23:00Z,NA,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
 2024-09-13T10:58:00Z,7.83,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
 2024-09-14T11:42:00Z,7.83,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
 2024-09-15T14:58:00Z,7.83,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
@@ -430,19 +414,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,7.78,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
 2024-03-02T16:06:00Z,7.78,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
 2024-03-03T16:06:00Z,7.78,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
-2024-03-05T16:05:00Z,NA,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
-2024-03-06T16:13:00Z,NA,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
-2024-03-08T16:05:00Z,NA,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
-2024-03-09T16:06:00Z,NA,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
-2024-03-10T16:08:00Z,NA,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
-2024-03-18T22:53:00Z,NA,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
-2024-03-19T09:37:00Z,NA,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
-2024-03-20T10:43:00Z,NA,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
-2024-03-21T09:37:00Z,NA,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
-2024-03-22T10:00:00Z,NA,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
-2024-03-23T08:48:00Z,NA,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
-2024-03-24T09:42:00Z,NA,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
-2024-03-25T07:59:00Z,NA,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
 2024-03-26T09:10:00Z,7.78,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
 2024-03-26T09:30:00Z,7.78,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
 2024-03-27T09:33:00Z,7.78,NA,NoFrills,Naturegg Free Run Omega 3 Eggs
@@ -608,7 +579,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:11:00Z,7.23,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
 2024-09-09T14:23:00Z,7.23,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
 2024-09-10T09:51:00Z,7.23,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
-2024-09-12T11:23:00Z,NA,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
 2024-09-13T10:58:00Z,7.23,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
 2024-09-14T11:42:00Z,7.23,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
 2024-09-15T14:58:00Z,7.23,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
@@ -624,19 +594,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,6.88,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
 2024-03-02T16:06:00Z,6.88,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
 2024-03-03T16:06:00Z,6.88,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-05T16:05:00Z,NA,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-06T16:13:00Z,NA,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-10T16:08:00Z,NA,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-18T22:53:00Z,NA,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-19T09:37:00Z,NA,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-20T10:43:00Z,NA,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-21T09:37:00Z,NA,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-22T10:00:00Z,NA,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-23T08:48:00Z,NA,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-24T09:42:00Z,NA,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-25T07:59:00Z,NA,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
 2024-03-26T09:10:00Z,6.88,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
 2024-03-26T09:30:00Z,6.88,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
 2024-03-27T09:33:00Z,6.88,NA,NoFrills,"Naturegg Omega 3 Brown Eggs, Large"
@@ -802,7 +759,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:11:00Z,6.13,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
 2024-09-09T14:23:00Z,6.13,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
 2024-09-10T09:51:00Z,6.13,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
-2024-09-12T11:23:00Z,NA,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
 2024-09-13T10:58:00Z,6.13,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
 2024-09-14T11:42:00Z,6.13,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
 2024-09-15T14:58:00Z,6.13,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
@@ -818,19 +774,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,6.08,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
 2024-03-02T16:06:00Z,6.08,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
 2024-03-03T16:06:00Z,6.08,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
-2024-03-05T16:05:00Z,NA,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
-2024-03-06T16:12:00Z,NA,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
-2024-03-10T16:08:00Z,NA,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
-2024-03-18T22:53:00Z,NA,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
-2024-03-19T09:37:00Z,NA,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
-2024-03-20T10:43:00Z,NA,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
-2024-03-21T09:37:00Z,NA,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
-2024-03-22T10:00:00Z,NA,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
-2024-03-23T08:48:00Z,NA,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
-2024-03-24T09:42:00Z,NA,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
-2024-03-25T07:58:00Z,NA,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
 2024-03-26T09:10:00Z,6.08,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
 2024-03-26T09:30:00Z,6.08,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
 2024-03-27T09:33:00Z,6.08,NA,NoFrills,"Naturegg Omega 3 White Eggs, Large"
@@ -995,7 +938,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:11:00Z,7.13,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
 2024-09-09T14:23:00Z,7.13,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
 2024-09-10T09:51:00Z,7.13,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
-2024-09-12T11:23:00Z,NA,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
 2024-09-13T10:58:00Z,7.13,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
 2024-09-14T11:42:00Z,7.13,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
 2024-09-15T14:58:00Z,7.13,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
@@ -1011,19 +953,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,7.08,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
 2024-03-02T16:06:00Z,7.08,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
 2024-03-03T16:06:00Z,7.08,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
-2024-03-05T16:05:00Z,NA,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
-2024-03-06T16:13:00Z,NA,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
-2024-03-10T16:08:00Z,NA,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
-2024-03-18T22:53:00Z,NA,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
-2024-03-19T09:37:00Z,NA,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
-2024-03-20T10:43:00Z,NA,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
-2024-03-21T09:37:00Z,NA,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
-2024-03-22T10:00:00Z,NA,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
-2024-03-23T08:48:00Z,NA,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
-2024-03-24T09:42:00Z,NA,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
-2024-03-25T07:59:00Z,NA,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
 2024-03-26T09:10:00Z,7.08,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
 2024-03-26T09:30:00Z,7.08,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
 2024-03-27T09:33:00Z,7.08,NA,NoFrills,"Naturegg Omega Plus White Eggs, Large"
@@ -1234,7 +1163,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-08-17T09:10:00Z,5.58,NA,Walmart,"Nutri Large Brown Eggs, 12 count"
 2024-08-18T10:52:00Z,5.58,NA,Walmart,"Nutri Large Brown Eggs, 12 count"
 2024-08-19T08:41:00Z,5.58,NA,Walmart,"Nutri Large Brown Eggs, 12 count"
-2024-08-20T09:56:00Z,NA,NA,Walmart,"Conestoga Farms Free Run Omega-3 Large Brown Eggs, 12 Count"
 2024-09-21T09:28:00Z,10.24,NA,Walmart,"Island Gold 2.5 Dozens Large White Eggs, 30 eggs / tray"
 2024-09-22T09:04:00Z,10.24,NA,Walmart,"Island Gold 2.5 Dozens Large White Eggs, 30 eggs / tray"
 2024-02-28T08:17:00Z,3.89,NA,Voila,Compliments White Eggs Large 12 Count
@@ -2454,22 +2382,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,5.58,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
 2024-03-02T16:06:00Z,5.58,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
 2024-03-03T16:04:00Z,5.58,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-05T16:04:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-06T16:11:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-07T16:14:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-08T16:05:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-09T16:06:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-10T16:07:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-11T16:04:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-12T16:07:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-18T22:52:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-19T09:36:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-20T10:42:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-21T09:36:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-22T09:59:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-23T08:47:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-24T09:41:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-25T07:58:00Z,NA,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
 2024-03-26T09:09:00Z,5.58,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
 2024-03-26T09:29:00Z,5.58,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
 2024-03-27T09:33:00Z,5.58,NA,Loblaws,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
@@ -2520,19 +2432,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,5.38,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
 2024-03-02T16:06:00Z,5.38,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
 2024-03-03T16:06:00Z,5.38,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-05T16:05:00Z,NA,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-06T16:13:00Z,NA,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-08T16:05:00Z,NA,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-09T16:06:00Z,NA,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-10T16:08:00Z,NA,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-18T22:53:00Z,NA,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-19T09:37:00Z,NA,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-20T10:43:00Z,NA,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-21T09:37:00Z,NA,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-22T10:00:00Z,NA,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-23T08:48:00Z,NA,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-24T09:42:00Z,NA,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-25T07:59:00Z,NA,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
 2024-03-26T09:10:00Z,5.38,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
 2024-03-26T09:30:00Z,5.38,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
 2024-03-27T09:33:00Z,5.38,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
@@ -2611,13 +2510,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-06-08T10:05:00Z,5.38,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
 2024-06-09T11:04:00Z,5.38,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
 2024-06-10T11:52:00Z,5.38,NA,NoFrills,"Super Bon-Ee Grade A White Eggs, Super Extra Large"
-2024-03-29T10:01:00Z,NA,NA,Walmart,"Great Value Organic Free-run Large Brown Eggs, 12 Count"
-2024-05-11T09:47:00Z,NA,NA,Walmart,"Conestoga Farms Free Range Medium Brown Eggs, 12 count"
-2024-05-12T09:21:00Z,NA,NA,Walmart,"Conestoga Farms Free Range Medium Brown Eggs, 12 count"
-2024-05-13T10:59:00Z,NA,NA,Walmart,"Conestoga Farms Free Range Medium Brown Eggs, 12 count"
-2024-05-14T09:22:00Z,NA,NA,Walmart,"Conestoga Farms Free Range Medium Brown Eggs, 12 count"
-2024-05-15T09:40:00Z,NA,NA,Walmart,"Conestoga Farms Free Range Medium Brown Eggs, 12 count"
-2024-05-16T08:24:00Z,NA,NA,Walmart,"Conestoga Farms Free Range Medium Brown Eggs, 12 count"
 2024-05-29T09:58:00Z,8.23,NA,Walmart,Burnbrae Farms 2.5 Dozens Large White Eggs
 2024-05-29T09:58:00Z,3.87,NA,Walmart,Burnbrae Farms Shell Eggs - 12
 2024-06-22T10:55:00Z,7.99,NA,Voila,Burnbrae Farms Eggs Hard Boiled 12 Count
@@ -7938,8 +7830,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T09:47:00Z,7.93,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-09-09T13:07:00Z,7.93,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-09-10T08:28:00Z,7.93,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-09-11T09:34:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-09-12T10:14:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-09-13T09:36:00Z,7.93,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-09-14T10:18:00Z,7.93,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-09-15T13:34:00Z,7.93,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
@@ -8006,22 +7896,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,7.88,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-03-02T16:06:00Z,7.88,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-03-03T16:04:00Z,7.88,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-05T16:04:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-06T16:10:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-07T16:13:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-08T16:05:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-09T16:06:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-10T16:07:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-11T16:04:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-12T16:07:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-18T22:52:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-19T09:36:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-20T10:42:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-21T09:36:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-22T09:59:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-23T08:47:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-24T09:41:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-25T07:58:00Z,NA,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-03-26T09:09:00Z,7.88,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-03-26T09:29:00Z,7.88,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-03-27T09:33:00Z,7.88,NA,Loblaws,Blue Menu Free Run Large Brown Eggs 12 Pack
@@ -8185,8 +8059,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T10:23:00Z,7.53,NA,Loblaws,Extra Large Free Run Brown Eggs
 2024-09-09T13:38:00Z,7.53,NA,Loblaws,Extra Large Free Run Brown Eggs
 2024-09-10T09:04:00Z,7.53,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-09-11T10:08:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-09-12T10:46:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
 2024-09-13T10:15:00Z,7.53,NA,Loblaws,Extra Large Free Run Brown Eggs
 2024-09-14T10:54:00Z,7.53,NA,Loblaws,Extra Large Free Run Brown Eggs
 2024-09-16T12:19:00Z,7.53,NA,Loblaws,Extra Large Free Run Brown Eggs
@@ -8252,22 +8124,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,7.48,NA,Loblaws,Extra Large Free Run Brown Eggs
 2024-03-02T16:06:00Z,7.48,NA,Loblaws,Extra Large Free Run Brown Eggs
 2024-03-03T16:04:00Z,7.48,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-05T16:04:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-06T16:10:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-07T16:13:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-08T16:05:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-09T16:06:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-10T16:07:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-11T16:04:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-12T16:07:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-18T22:52:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-19T09:36:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-20T10:42:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-21T09:36:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-22T09:59:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-23T08:47:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-24T09:41:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
-2024-03-25T07:58:00Z,NA,NA,Loblaws,Extra Large Free Run Brown Eggs
 2024-03-26T09:09:00Z,7.48,NA,Loblaws,Extra Large Free Run Brown Eggs
 2024-03-26T09:29:00Z,7.48,NA,Loblaws,Extra Large Free Run Brown Eggs
 2024-03-27T09:33:00Z,7.48,NA,Loblaws,Extra Large Free Run Brown Eggs
@@ -8431,8 +8287,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T10:23:00Z,8.13,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
 2024-09-09T13:38:00Z,8.13,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
 2024-09-10T09:04:00Z,8.13,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-09-11T10:08:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-09-12T10:46:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
 2024-09-13T10:15:00Z,8.13,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
 2024-09-14T10:54:00Z,8.13,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
 2024-09-16T12:19:00Z,8.13,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
@@ -8498,22 +8352,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,7.98,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
 2024-03-02T16:06:00Z,7.98,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
 2024-03-03T16:04:00Z,7.98,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-05T16:04:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-06T16:10:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-07T16:13:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-08T16:05:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-09T16:06:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-10T16:07:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-11T16:04:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-12T16:07:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-18T22:52:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-19T09:36:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-20T10:42:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-21T09:36:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-22T09:59:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-23T08:47:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-24T09:41:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
-2024-03-25T07:58:00Z,NA,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
 2024-03-26T09:09:00Z,7.98,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
 2024-03-26T09:29:00Z,7.98,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
 2024-03-27T09:33:00Z,7.98,NA,Loblaws,Extra Large Size Free-Range Brown Eggs
@@ -8680,8 +8518,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T10:28:00Z,7.83,NA,Loblaws,Free Range Large Brown Eggs
 2024-09-09T13:42:00Z,7.83,NA,Loblaws,Free Range Large Brown Eggs
 2024-09-10T09:09:00Z,7.83,NA,Loblaws,Free Range Large Brown Eggs
-2024-09-11T10:13:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-09-12T10:50:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
 2024-09-13T10:21:00Z,7.83,NA,Loblaws,Free Range Large Brown Eggs
 2024-09-14T10:59:00Z,7.83,NA,Loblaws,Free Range Large Brown Eggs
 2024-09-15T14:17:00Z,7.83,NA,Loblaws,Free Range Large Brown Eggs
@@ -8747,22 +8583,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,7.78,NA,Loblaws,Free Range Large Brown Eggs
 2024-03-02T16:06:00Z,7.78,NA,Loblaws,Free Range Large Brown Eggs
 2024-03-03T16:04:00Z,7.78,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-05T16:04:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-06T16:10:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-07T16:12:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-08T16:05:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-09T16:06:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-10T16:07:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-11T16:04:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-12T16:07:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-18T22:52:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-19T09:36:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-20T10:42:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-21T09:36:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-22T09:59:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-23T08:47:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-24T09:41:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
-2024-03-25T07:58:00Z,NA,NA,Loblaws,Free Range Large Brown Eggs
 2024-03-26T09:09:00Z,7.78,NA,Loblaws,Free Range Large Brown Eggs
 2024-03-26T09:29:00Z,7.78,NA,Loblaws,Free Range Large Brown Eggs
 2024-03-27T09:32:00Z,7.78,NA,Loblaws,Free Range Large Brown Eggs
@@ -8929,8 +8749,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T10:28:00Z,7.13,NA,Loblaws,Free Run Brown Eggs Large
 2024-09-09T13:42:00Z,7.13,NA,Loblaws,Free Run Brown Eggs Large
 2024-09-10T09:09:00Z,7.13,NA,Loblaws,Free Run Brown Eggs Large
-2024-09-11T10:13:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-09-12T10:50:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
 2024-09-13T10:21:00Z,7.13,NA,Loblaws,Free Run Brown Eggs Large
 2024-09-14T10:59:00Z,7.13,NA,Loblaws,Free Run Brown Eggs Large
 2024-09-15T14:17:00Z,7.13,NA,Loblaws,Free Run Brown Eggs Large
@@ -8996,22 +8814,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,7.08,NA,Loblaws,Free Run Brown Eggs Large
 2024-03-02T16:06:00Z,7.08,NA,Loblaws,Free Run Brown Eggs Large
 2024-03-03T16:04:00Z,7.08,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-05T16:04:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-06T16:10:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-07T16:12:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-08T16:05:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-09T16:06:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-10T16:07:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-11T16:04:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-12T16:07:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-18T22:52:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-19T09:36:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-20T10:42:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-21T09:36:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-22T09:59:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-23T08:47:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-24T09:41:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
-2024-03-25T07:58:00Z,NA,NA,Loblaws,Free Run Brown Eggs Large
 2024-03-26T09:09:00Z,7.08,NA,Loblaws,Free Run Brown Eggs Large
 2024-03-26T09:29:00Z,7.08,NA,Loblaws,Free Run Brown Eggs Large
 2024-03-27T09:32:00Z,7.08,NA,Loblaws,Free Run Brown Eggs Large
@@ -9178,8 +8980,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T10:38:00Z,4.63,NA,Loblaws,Grade A Extra Large Eggs
 2024-09-09T13:50:00Z,4.63,NA,Loblaws,Grade A Extra Large Eggs
 2024-09-10T09:17:00Z,4.63,NA,Loblaws,Grade A Extra Large Eggs
-2024-09-11T10:22:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-09-12T10:57:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
 2024-09-13T10:31:00Z,4.63,NA,Loblaws,Grade A Extra Large Eggs
 2024-09-14T11:07:00Z,4.63,NA,Loblaws,Grade A Extra Large Eggs
 2024-09-15T14:25:00Z,4.63,NA,Loblaws,Grade A Extra Large Eggs
@@ -9245,22 +9045,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,4.58,NA,Loblaws,Grade A Extra Large Eggs
 2024-03-02T16:06:00Z,4.58,NA,Loblaws,Grade A Extra Large Eggs
 2024-03-03T16:04:00Z,4.58,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-05T16:04:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-06T16:10:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-07T16:12:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-08T16:05:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-09T16:06:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-10T16:07:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-11T16:04:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-12T16:07:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-18T22:52:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-19T09:36:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-20T10:42:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-21T09:36:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-22T09:59:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-23T08:47:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-24T09:41:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
-2024-03-25T07:58:00Z,NA,NA,Loblaws,Grade A Extra Large Eggs
 2024-03-26T09:09:00Z,4.58,NA,Loblaws,Grade A Extra Large Eggs
 2024-03-26T09:29:00Z,4.58,NA,Loblaws,Grade A Extra Large Eggs
 2024-03-27T09:32:00Z,4.58,NA,Loblaws,Grade A Extra Large Eggs
@@ -9427,8 +9211,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T10:38:00Z,6.23,NA,Loblaws,Grade A Large Brown Eggs
 2024-09-09T13:50:00Z,6.23,NA,Loblaws,Grade A Large Brown Eggs
 2024-09-10T09:17:00Z,6.23,NA,Loblaws,Grade A Large Brown Eggs
-2024-09-11T10:22:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-09-12T10:57:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
 2024-09-13T10:31:00Z,6.23,NA,Loblaws,Grade A Large Brown Eggs
 2024-09-14T11:07:00Z,6.23,NA,Loblaws,Grade A Large Brown Eggs
 2024-09-15T14:25:00Z,6.23,NA,Loblaws,Grade A Large Brown Eggs
@@ -9494,22 +9276,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,6.18,NA,Loblaws,Grade A Large Brown Eggs
 2024-03-02T16:06:00Z,6.18,NA,Loblaws,Grade A Large Brown Eggs
 2024-03-03T16:04:00Z,6.18,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-05T16:04:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-06T16:10:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-07T16:13:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-08T16:05:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-09T16:06:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-10T16:07:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-11T16:04:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-12T16:07:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-18T22:52:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-19T09:36:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-20T10:42:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-21T09:36:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-22T09:59:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-23T08:47:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-24T09:41:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
-2024-03-25T07:58:00Z,NA,NA,Loblaws,Grade A Large Brown Eggs
 2024-03-26T09:09:00Z,6.18,NA,Loblaws,Grade A Large Brown Eggs
 2024-03-26T09:29:00Z,6.18,NA,Loblaws,Grade A Large Brown Eggs
 2024-03-27T09:32:00Z,6.18,NA,Loblaws,Grade A Large Brown Eggs
@@ -9676,8 +9442,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T10:40:00Z,7.23,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
 2024-09-09T13:52:00Z,7.23,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
 2024-09-10T09:19:00Z,7.23,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-09-11T10:24:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-09-12T10:59:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
 2024-09-13T10:33:00Z,7.23,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
 2024-09-14T11:10:00Z,7.23,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
 2024-09-15T14:28:00Z,7.23,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
@@ -9744,22 +9508,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,7.18,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
 2024-03-02T16:06:00Z,7.18,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
 2024-03-03T16:04:00Z,7.18,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-05T16:04:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-06T16:11:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-07T16:14:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-08T16:05:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-09T16:06:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-10T16:07:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-11T16:04:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-12T16:07:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-18T22:52:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-19T09:36:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-20T10:42:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-21T09:36:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-22T09:59:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-23T08:47:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-24T09:41:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
-2024-03-25T07:58:00Z,NA,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
 2024-03-26T09:09:00Z,7.18,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
 2024-03-26T09:29:00Z,7.18,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
 2024-03-27T09:33:00Z,7.18,NA,Loblaws,Green Valley Eggs Size Large Free Run Brown
@@ -9865,8 +9613,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:12:00Z,5.49,5.68,Loblaws,"Nature's Best White Eggs, Large"
 2024-09-09T14:16:00Z,5.49,5.68,Loblaws,"Nature's Best White Eggs, Large"
 2024-09-10T09:52:00Z,5.49,5.68,Loblaws,"Nature's Best White Eggs, Large"
-2024-09-11T10:52:00Z,NA,was,Loblaws,"Nature's Best White Eggs, Large"
-2024-09-12T11:24:00Z,NA,was,Loblaws,"Nature's Best White Eggs, Large"
 2024-09-13T10:57:00Z,5.49,5.68,Loblaws,"Nature's Best White Eggs, Large"
 2024-09-14T11:43:00Z,5.49,5.68,Loblaws,"Nature's Best White Eggs, Large"
 2024-09-15T14:59:00Z,5.49,5.68,Loblaws,"Nature's Best White Eggs, Large"
@@ -9933,22 +9679,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,5.68,NA,Loblaws,"Nature's Best White Eggs, Large"
 2024-03-02T16:06:00Z,5.68,NA,Loblaws,"Nature's Best White Eggs, Large"
 2024-03-03T16:04:00Z,5.68,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-05T16:04:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-06T16:10:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-07T16:13:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-10T16:07:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-11T16:04:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-12T16:07:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-18T22:52:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-19T09:36:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-20T10:42:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-21T09:36:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-22T09:59:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-23T08:47:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-24T09:41:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
-2024-03-25T07:58:00Z,NA,NA,Loblaws,"Nature's Best White Eggs, Large"
 2024-03-26T09:09:00Z,5.68,NA,Loblaws,"Nature's Best White Eggs, Large"
 2024-03-26T09:29:00Z,5.68,NA,Loblaws,"Nature's Best White Eggs, Large"
 2024-03-27T09:33:00Z,5.68,NA,Loblaws,"Nature's Best White Eggs, Large"
@@ -10049,8 +9779,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:12:00Z,7.83,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
 2024-09-09T14:16:00Z,7.83,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
 2024-09-10T09:52:00Z,7.83,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-09-11T10:52:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-09-12T11:24:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
 2024-09-13T10:57:00Z,7.83,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
 2024-09-14T11:43:00Z,7.83,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
 2024-09-15T14:59:00Z,7.83,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
@@ -10117,22 +9845,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,7.78,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
 2024-03-02T16:06:00Z,7.78,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
 2024-03-03T16:04:00Z,7.78,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-05T16:04:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-06T16:11:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-07T16:15:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-08T16:05:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-09T16:06:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-10T16:07:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-11T16:04:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-12T16:07:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-18T22:52:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-19T09:36:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-20T10:42:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-21T09:36:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-22T09:59:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-23T08:47:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-24T09:41:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
-2024-03-25T07:58:00Z,NA,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
 2024-03-26T09:09:00Z,7.78,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
 2024-03-26T09:29:00Z,7.78,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
 2024-03-27T09:33:00Z,7.78,NA,Loblaws,Naturegg Free Run Omega 3 Eggs
@@ -10231,8 +9943,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:12:00Z,5.49,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
 2024-09-09T14:16:00Z,5.49,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
 2024-09-10T09:52:00Z,5.49,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
-2024-09-11T10:52:00Z,NA,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
-2024-09-12T11:24:00Z,NA,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
 2024-09-13T10:57:00Z,5.49,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
 2024-09-14T11:43:00Z,5.49,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
 2024-09-15T14:59:00Z,5.49,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
@@ -10299,17 +10009,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,6.08,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
 2024-03-02T16:06:00Z,6.08,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
 2024-03-03T16:04:00Z,6.08,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
-2024-03-05T16:04:00Z,NA,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
-2024-03-06T16:10:00Z,NA,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
-2024-03-07T16:13:00Z,NA,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
-2024-03-10T16:07:00Z,NA,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
-2024-03-11T16:04:00Z,NA,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
-2024-03-12T16:07:00Z,NA,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
-2024-03-18T22:52:00Z,NA,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
-2024-03-19T09:36:00Z,NA,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
-2024-03-20T10:42:00Z,NA,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
 2024-03-21T09:36:00Z,1,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
 2024-03-22T09:59:00Z,1,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
 2024-03-23T08:47:00Z,1,NA,Loblaws,"Naturegg Nest Laid White Eggs, Large"
@@ -10411,8 +10110,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:12:00Z,7.23,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
 2024-09-09T14:16:00Z,7.23,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
 2024-09-10T09:52:00Z,7.23,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-09-11T10:52:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-09-12T11:24:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
 2024-09-13T10:57:00Z,7.23,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
 2024-09-14T11:43:00Z,7.23,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
 2024-09-15T14:59:00Z,7.23,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
@@ -10479,22 +10176,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,7.18,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
 2024-03-02T16:06:00Z,7.18,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
 2024-03-03T16:04:00Z,7.18,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-05T16:04:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-06T16:12:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-07T16:15:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-10T16:07:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-11T16:04:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-12T16:07:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-18T22:52:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-19T09:36:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-20T10:42:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-21T09:36:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-22T09:59:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-23T08:47:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-24T09:41:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
-2024-03-25T07:58:00Z,NA,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
 2024-03-26T09:09:00Z,7.18,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
 2024-03-26T09:29:00Z,7.18,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
 2024-03-27T09:33:00Z,7.18,NA,Loblaws,"Naturegg Omega 3 Brown Eggs, Large"
@@ -10588,8 +10269,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:12:00Z,6.23,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
 2024-09-09T14:16:00Z,6.23,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
 2024-09-10T09:52:00Z,6.23,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-09-11T10:52:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-09-12T11:24:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
 2024-09-13T10:57:00Z,6.23,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
 2024-09-14T11:43:00Z,6.23,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
 2024-09-15T14:59:00Z,6.23,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
@@ -10656,22 +10335,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,6.18,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
 2024-03-02T16:06:00Z,6.18,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
 2024-03-03T16:04:00Z,6.18,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-05T16:04:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-06T16:10:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-07T16:13:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-10T16:07:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-11T16:04:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-12T16:07:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-18T22:52:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-19T09:36:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-20T10:42:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-21T09:36:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-22T09:59:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-23T08:47:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-24T09:41:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
-2024-03-25T07:58:00Z,NA,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
 2024-03-26T09:09:00Z,6.18,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
 2024-03-26T09:29:00Z,6.18,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
 2024-03-27T09:33:00Z,6.18,NA,Loblaws,"Naturegg Omega 3 White Eggs, Large"
@@ -10764,8 +10427,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:12:00Z,5.49,7.08,Loblaws,"Naturegg Omega Plus White Eggs, Large"
 2024-09-09T14:16:00Z,5.49,7.08,Loblaws,"Naturegg Omega Plus White Eggs, Large"
 2024-09-10T09:52:00Z,5.49,7.08,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-09-11T10:52:00Z,NA,was,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-09-12T11:24:00Z,NA,was,Loblaws,"Naturegg Omega Plus White Eggs, Large"
 2024-09-13T10:57:00Z,5.49,7.08,Loblaws,"Naturegg Omega Plus White Eggs, Large"
 2024-09-14T11:43:00Z,5.49,7.08,Loblaws,"Naturegg Omega Plus White Eggs, Large"
 2024-09-15T14:59:00Z,5.49,7.08,Loblaws,"Naturegg Omega Plus White Eggs, Large"
@@ -10832,22 +10493,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,7.08,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
 2024-03-02T16:06:00Z,7.08,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
 2024-03-03T16:04:00Z,7.08,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-05T16:04:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-06T16:11:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-07T16:14:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-10T16:07:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-11T16:04:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-12T16:07:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-18T22:52:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-19T09:36:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-20T10:42:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-21T09:36:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-22T09:59:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-23T08:47:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-24T09:41:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
-2024-03-25T07:58:00Z,NA,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
 2024-03-26T09:09:00Z,7.08,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
 2024-03-26T09:29:00Z,7.08,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
 2024-03-27T09:33:00Z,7.08,NA,Loblaws,"Naturegg Omega Plus White Eggs, Large"
@@ -10982,22 +10627,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,5.58,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
 2024-03-02T16:06:00Z,5.58,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
 2024-03-03T16:04:00Z,5.58,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-05T16:04:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-06T16:11:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-07T16:15:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-08T16:05:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-09T16:06:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-10T16:07:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-11T16:04:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-12T16:07:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-18T22:52:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-19T09:36:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-20T10:42:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-21T09:36:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-22T09:59:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-23T08:47:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-24T09:41:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
-2024-03-25T07:58:00Z,NA,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
 2024-03-26T09:09:00Z,5.58,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
 2024-03-26T09:29:00Z,5.58,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
 2024-03-27T09:33:00Z,5.58,NA,Loblaws,Super Bon-Ee Grade A Double Yolk White Eggs
@@ -11177,8 +10806,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T09:47:00Z,7.43,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
 2024-09-09T13:07:00Z,7.43,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
 2024-09-10T08:28:00Z,7.43,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
-2024-09-11T09:34:00Z,NA,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
-2024-09-12T10:14:00Z,NA,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
 2024-09-13T09:36:00Z,7.43,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
 2024-09-14T10:18:00Z,7.43,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
 2024-09-15T13:34:00Z,7.43,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
@@ -11266,14 +10893,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-10T16:07:00Z,1.3,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
 2024-03-11T16:04:00Z,1.3,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
 2024-03-12T16:07:00Z,1.3,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-18T22:52:00Z,NA,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-19T09:36:00Z,NA,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-20T10:42:00Z,NA,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-21T09:36:00Z,NA,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-22T09:59:00Z,NA,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-23T08:47:00Z,NA,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-24T09:41:00Z,NA,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-25T07:58:00Z,NA,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
 2024-03-26T09:09:00Z,7.38,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
 2024-03-26T09:29:00Z,7.38,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
 2024-03-27T09:33:00Z,7.38,NA,Loblaws,Blue Menu Free Run Large White Eggs 12 Pack
@@ -11531,8 +11150,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T10:40:00Z,6.33,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
 2024-09-09T13:52:00Z,6.33,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
 2024-09-10T09:19:00Z,6.33,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-09-11T10:24:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-09-12T10:59:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
 2024-09-13T10:33:00Z,6.33,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
 2024-09-14T11:10:00Z,6.33,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
 2024-09-15T14:28:00Z,6.33,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
@@ -11612,22 +11229,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,6.28,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
 2024-03-02T16:06:00Z,6.28,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
 2024-03-03T16:04:00Z,6.28,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-05T16:04:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-06T16:11:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-07T16:15:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-10T16:07:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-11T16:04:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-12T16:07:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-18T22:52:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-19T09:36:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-20T10:42:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-21T09:36:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-22T09:59:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-23T08:47:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-24T09:41:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
-2024-03-25T07:58:00Z,NA,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
 2024-03-26T09:09:00Z,6.28,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
 2024-03-26T09:29:00Z,6.28,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
 2024-03-27T09:33:00Z,6.28,NA,Loblaws,"Green Valley Omega 3 Eggs, Large"
@@ -11794,8 +11395,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T10:55:00Z,3.93,NA,Loblaws,Large Grade A Eggs
 2024-09-09T14:03:00Z,3.93,NA,Loblaws,Large Grade A Eggs
 2024-09-10T09:34:00Z,3.93,NA,Loblaws,Large Grade A Eggs
-2024-09-11T10:37:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-09-12T11:10:00Z,NA,NA,Loblaws,Large Grade A Eggs
 2024-09-13T10:46:00Z,3.93,NA,Loblaws,Large Grade A Eggs
 2024-09-14T11:25:00Z,3.93,NA,Loblaws,Large Grade A Eggs
 2024-09-15T14:43:00Z,3.93,NA,Loblaws,Large Grade A Eggs
@@ -11875,22 +11474,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,3.88,NA,Loblaws,Large Grade A Eggs
 2024-03-02T16:06:00Z,3.88,NA,Loblaws,Large Grade A Eggs
 2024-03-03T16:04:00Z,3.88,NA,Loblaws,Large Grade A Eggs
-2024-03-05T16:04:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-06T16:10:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-07T16:12:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-08T16:05:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-09T16:06:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-10T16:07:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-11T16:04:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-12T16:07:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-18T22:52:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-19T09:36:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-20T10:42:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-21T09:36:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-22T09:59:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-23T08:47:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-24T09:41:00Z,NA,NA,Loblaws,Large Grade A Eggs
-2024-03-25T07:58:00Z,NA,NA,Loblaws,Large Grade A Eggs
 2024-03-26T09:09:00Z,3.88,NA,Loblaws,Large Grade A Eggs
 2024-03-26T09:29:00Z,3.88,NA,Loblaws,Large Grade A Eggs
 2024-03-27T09:32:00Z,3.88,NA,Loblaws,Large Grade A Eggs
@@ -12026,8 +11609,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:12:00Z,5.99,6.29,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-09-09T14:16:00Z,5.99,6.29,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-09-10T09:52:00Z,5.99,6.29,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-09-11T10:52:00Z,NA,was,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-09-12T11:24:00Z,NA,was,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-09-13T10:57:00Z,5.99,6.29,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-09-14T11:43:00Z,5.99,6.29,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-09-15T14:59:00Z,5.99,6.29,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
@@ -12107,17 +11688,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,6.58,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-03-02T16:06:00Z,6.58,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-03-03T16:04:00Z,6.58,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-05T16:04:00Z,NA,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-06T16:10:00Z,NA,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-07T16:14:00Z,NA,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-08T16:05:00Z,NA,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-09T16:06:00Z,NA,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-10T16:07:00Z,NA,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-11T16:04:00Z,NA,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-12T16:07:00Z,NA,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-18T22:52:00Z,NA,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-19T09:36:00Z,NA,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-20T10:42:00Z,NA,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-03-21T09:36:00Z,1.5,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-03-22T09:59:00Z,1.5,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-03-23T08:47:00Z,1.5,NA,Loblaws,Naturegg NestlaidOmega 3 Large Size 12 Eggs
@@ -12242,8 +11812,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:12:00Z,5.99,8.08,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-09-09T14:16:00Z,5.99,8.08,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-09-10T09:52:00Z,5.99,8.08,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-09-11T10:52:00Z,NA,was,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-09-12T11:24:00Z,NA,was,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-09-13T10:57:00Z,5.99,8.08,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-09-14T11:43:00Z,5.99,8.08,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-09-15T14:59:00Z,5.99,8.08,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
@@ -12323,17 +11891,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,8.08,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-03-02T16:06:00Z,8.08,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-03-03T16:04:00Z,8.08,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-05T16:04:00Z,NA,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-06T16:11:00Z,NA,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-07T16:14:00Z,NA,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-10T16:07:00Z,NA,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-11T16:04:00Z,NA,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-12T16:07:00Z,NA,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-18T22:52:00Z,NA,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-19T09:36:00Z,NA,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-20T10:42:00Z,NA,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-03-21T09:36:00Z,2,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-03-22T09:59:00Z,2,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-03-23T08:47:00Z,2,NA,Loblaws,"Naturegg Omega Plus Solar Free Range Eggs, Large"
@@ -12444,8 +12001,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:12:00Z,5.99,8.08,Loblaws,"Naturegg Solar Free Range Eggs, Large"
 2024-09-09T14:16:00Z,5.99,8.08,Loblaws,"Naturegg Solar Free Range Eggs, Large"
 2024-09-10T09:52:00Z,5.99,8.08,Loblaws,"Naturegg Solar Free Range Eggs, Large"
-2024-09-11T10:52:00Z,NA,was,Loblaws,"Naturegg Solar Free Range Eggs, Large"
-2024-09-12T11:24:00Z,NA,was,Loblaws,"Naturegg Solar Free Range Eggs, Large"
 2024-09-13T10:57:00Z,5.99,8.08,Loblaws,"Naturegg Solar Free Range Eggs, Large"
 2024-09-14T11:43:00Z,5.99,8.08,Loblaws,"Naturegg Solar Free Range Eggs, Large"
 2024-09-15T14:59:00Z,5.99,8.08,Loblaws,"Naturegg Solar Free Range Eggs, Large"
@@ -12525,17 +12080,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:09:00Z,8.08,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
 2024-03-02T16:06:00Z,8.08,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
 2024-03-03T16:04:00Z,8.08,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
-2024-03-05T16:04:00Z,NA,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
-2024-03-06T16:11:00Z,NA,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
-2024-03-07T16:16:00Z,NA,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
-2024-03-10T16:07:00Z,NA,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
-2024-03-11T16:04:00Z,NA,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
-2024-03-12T16:07:00Z,NA,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
-2024-03-18T22:52:00Z,NA,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
-2024-03-19T09:36:00Z,NA,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
-2024-03-20T10:42:00Z,NA,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
 2024-03-21T09:36:00Z,2,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
 2024-03-22T09:59:00Z,2,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
 2024-03-23T08:47:00Z,2,NA,Loblaws,"Naturegg Solar Free Range Eggs, Large"
@@ -17907,7 +17451,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T09:45:00Z,7.93,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-09-09T13:06:00Z,7.93,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-09-10T08:27:00Z,7.93,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-09-11T09:31:00Z,NA,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-09-13T09:34:00Z,7.93,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-09-14T10:15:00Z,7.93,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-09-15T13:31:00Z,7.93,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
@@ -17974,19 +17517,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,7.88,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-03-02T16:06:00Z,7.88,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-03-03T16:06:00Z,7.88,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-05T16:05:00Z,NA,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-06T16:12:00Z,NA,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-08T16:05:00Z,NA,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-09T16:06:00Z,NA,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-10T16:08:00Z,NA,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-18T22:53:00Z,NA,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-19T09:37:00Z,NA,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-20T10:43:00Z,NA,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-21T09:37:00Z,NA,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-22T10:00:00Z,NA,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-23T08:48:00Z,NA,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-24T09:42:00Z,NA,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
-2024-03-25T07:58:00Z,NA,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-03-26T09:10:00Z,7.88,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-03-26T09:30:00Z,7.88,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
 2024-03-27T09:33:00Z,7.88,NA,NoFrills,Blue Menu Free Run Large Brown Eggs 12 Pack
@@ -18147,8 +17677,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T10:16:00Z,7.43,NA,NoFrills,Extra Large Free Run Brown Eggs
 2024-09-09T13:37:00Z,7.43,NA,NoFrills,Extra Large Free Run Brown Eggs
 2024-09-10T08:58:00Z,7.43,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-09-11T10:01:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-09-12T10:39:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
 2024-09-13T10:08:00Z,7.43,NA,NoFrills,Extra Large Free Run Brown Eggs
 2024-09-14T10:49:00Z,7.43,NA,NoFrills,Extra Large Free Run Brown Eggs
 2024-09-15T14:06:00Z,7.43,NA,NoFrills,Extra Large Free Run Brown Eggs
@@ -18214,19 +17742,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,7.38,NA,NoFrills,Extra Large Free Run Brown Eggs
 2024-03-02T16:06:00Z,7.38,NA,NoFrills,Extra Large Free Run Brown Eggs
 2024-03-03T16:06:00Z,7.38,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-03-05T16:05:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-03-06T16:12:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-03-08T16:05:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-03-09T16:06:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-03-10T16:08:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-03-18T22:53:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-03-19T09:37:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-03-20T10:43:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-03-21T09:37:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-03-22T10:00:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-03-23T08:48:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-03-24T09:42:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
-2024-03-25T07:58:00Z,NA,NA,NoFrills,Extra Large Free Run Brown Eggs
 2024-03-26T09:10:00Z,7.38,NA,NoFrills,Extra Large Free Run Brown Eggs
 2024-03-26T09:30:00Z,7.38,NA,NoFrills,Extra Large Free Run Brown Eggs
 2024-03-27T09:33:00Z,7.38,NA,NoFrills,Extra Large Free Run Brown Eggs
@@ -18440,8 +17955,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-07T09:44:00Z,7.69,NA,NoFrills,Free Range Large Brown Eggs
 2024-09-08T10:21:00Z,7.74,NA,NoFrills,Free Range Large Brown Eggs
 2024-09-10T09:03:00Z,7.74,NA,NoFrills,Free Range Large Brown Eggs
-2024-09-11T10:06:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
-2024-09-12T10:43:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
 2024-09-13T10:14:00Z,7.74,NA,NoFrills,Free Range Large Brown Eggs
 2024-09-14T10:53:00Z,7.74,NA,NoFrills,Free Range Large Brown Eggs
 2024-09-15T14:10:00Z,7.74,NA,NoFrills,Free Range Large Brown Eggs
@@ -18508,19 +18021,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,7.88,NA,NoFrills,Free Range Large Brown Eggs
 2024-03-02T16:06:00Z,7.88,NA,NoFrills,Free Range Large Brown Eggs
 2024-03-03T16:06:00Z,7.88,NA,NoFrills,Free Range Large Brown Eggs
-2024-03-05T16:05:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
-2024-03-06T16:12:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
-2024-03-08T16:05:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
-2024-03-09T16:06:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
-2024-03-10T16:08:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
-2024-03-18T22:53:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
-2024-03-19T09:37:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
-2024-03-20T10:43:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
-2024-03-21T09:37:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
-2024-03-22T10:00:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
-2024-03-23T08:48:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
-2024-03-24T09:42:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
-2024-03-25T07:58:00Z,NA,NA,NoFrills,Free Range Large Brown Eggs
 2024-03-26T09:10:00Z,7.88,NA,NoFrills,Free Range Large Brown Eggs
 2024-03-26T09:30:00Z,7.88,NA,NoFrills,Free Range Large Brown Eggs
 2024-03-27T09:33:00Z,7.88,NA,NoFrills,Free Range Large Brown Eggs
@@ -18683,8 +18183,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-07T09:44:00Z,7.08,NA,NoFrills,Free Run Brown Eggs Large
 2024-09-08T10:21:00Z,7.13,NA,NoFrills,Free Run Brown Eggs Large
 2024-09-10T09:03:00Z,7.13,NA,NoFrills,Free Run Brown Eggs Large
-2024-09-11T10:06:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
-2024-09-12T10:43:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
 2024-09-13T10:14:00Z,7.13,NA,NoFrills,Free Run Brown Eggs Large
 2024-09-14T10:53:00Z,7.13,NA,NoFrills,Free Run Brown Eggs Large
 2024-09-15T14:10:00Z,7.13,NA,NoFrills,Free Run Brown Eggs Large
@@ -18751,19 +18249,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,7.08,NA,NoFrills,Free Run Brown Eggs Large
 2024-03-02T16:06:00Z,7.08,NA,NoFrills,Free Run Brown Eggs Large
 2024-03-03T16:06:00Z,7.08,NA,NoFrills,Free Run Brown Eggs Large
-2024-03-05T16:05:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
-2024-03-06T16:12:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
-2024-03-08T16:05:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
-2024-03-09T16:06:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
-2024-03-10T16:08:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
-2024-03-18T22:53:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
-2024-03-19T09:37:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
-2024-03-20T10:43:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
-2024-03-21T09:37:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
-2024-03-22T10:00:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
-2024-03-23T08:48:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
-2024-03-24T09:42:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
-2024-03-25T07:58:00Z,NA,NA,NoFrills,Free Run Brown Eggs Large
 2024-03-26T09:10:00Z,7.08,NA,NoFrills,Free Run Brown Eggs Large
 2024-03-26T09:30:00Z,7.08,NA,NoFrills,Free Run Brown Eggs Large
 2024-03-27T09:33:00Z,7.08,NA,NoFrills,Free Run Brown Eggs Large
@@ -19079,8 +18564,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-07T09:52:00Z,4.58,NA,NoFrills,Grade A Extra Large Eggs
 2024-09-09T13:49:00Z,4.63,NA,NoFrills,Grade A Extra Large Eggs
 2024-09-10T09:11:00Z,4.63,NA,NoFrills,Grade A Extra Large Eggs
-2024-09-11T10:15:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
-2024-09-12T10:51:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
 2024-09-13T10:23:00Z,4.63,NA,NoFrills,Grade A Extra Large Eggs
 2024-09-14T11:00:00Z,4.63,NA,NoFrills,Grade A Extra Large Eggs
 2024-09-15T14:18:00Z,4.63,NA,NoFrills,Grade A Extra Large Eggs
@@ -19147,19 +18630,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,4.58,NA,NoFrills,Grade A Extra Large Eggs
 2024-03-02T16:06:00Z,4.58,NA,NoFrills,Grade A Extra Large Eggs
 2024-03-03T16:06:00Z,4.58,NA,NoFrills,Grade A Extra Large Eggs
-2024-03-05T16:05:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
-2024-03-06T16:12:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
-2024-03-08T16:05:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
-2024-03-09T16:06:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
-2024-03-10T16:08:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
-2024-03-18T22:53:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
-2024-03-19T09:37:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
-2024-03-20T10:43:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
-2024-03-21T09:37:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
-2024-03-22T10:00:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
-2024-03-23T08:48:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
-2024-03-24T09:42:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
-2024-03-25T07:58:00Z,NA,NA,NoFrills,Grade A Extra Large Eggs
 2024-03-26T09:10:00Z,4.58,NA,NoFrills,Grade A Extra Large Eggs
 2024-03-26T09:30:00Z,4.58,NA,NoFrills,Grade A Extra Large Eggs
 2024-03-27T09:33:00Z,4.58,NA,NoFrills,Grade A Extra Large Eggs
@@ -19377,8 +18847,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:04:00Z,3.73,NA,NoFrills,Medium Grade A White Eggs
 2024-09-09T14:17:00Z,3.73,NA,NoFrills,Medium Grade A White Eggs
 2024-09-10T09:44:00Z,3.73,NA,NoFrills,Medium Grade A White Eggs
-2024-09-11T10:45:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
-2024-09-12T11:17:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
 2024-09-13T10:53:00Z,3.73,NA,NoFrills,Medium Grade A White Eggs
 2024-09-14T11:34:00Z,3.73,NA,NoFrills,Medium Grade A White Eggs
 2024-09-15T14:51:00Z,3.73,NA,NoFrills,Medium Grade A White Eggs
@@ -19445,19 +18913,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,3.68,NA,NoFrills,Medium Grade A White Eggs
 2024-03-02T16:06:00Z,3.68,NA,NoFrills,Medium Grade A White Eggs
 2024-03-03T16:06:00Z,3.68,NA,NoFrills,Medium Grade A White Eggs
-2024-03-05T16:05:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
-2024-03-06T16:12:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
-2024-03-08T16:05:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
-2024-03-09T16:06:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
-2024-03-10T16:08:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
-2024-03-18T22:53:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
-2024-03-19T09:37:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
-2024-03-20T10:43:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
-2024-03-21T09:37:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
-2024-03-22T10:00:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
-2024-03-23T08:48:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
-2024-03-24T09:42:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
-2024-03-25T07:58:00Z,NA,NA,NoFrills,Medium Grade A White Eggs
 2024-03-26T09:10:00Z,3.68,NA,NoFrills,Medium Grade A White Eggs
 2024-03-26T09:30:00Z,3.68,NA,NoFrills,Medium Grade A White Eggs
 2024-03-27T09:33:00Z,3.68,NA,NoFrills,Medium Grade A White Eggs
@@ -19624,8 +19079,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:04:00Z,7.64,NA,NoFrills,Medium Size Free-Range Brown Eggs
 2024-09-09T14:17:00Z,7.64,NA,NoFrills,Medium Size Free-Range Brown Eggs
 2024-09-10T09:44:00Z,7.64,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-09-11T10:46:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-09-12T11:17:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
 2024-09-13T10:53:00Z,7.64,NA,NoFrills,Medium Size Free-Range Brown Eggs
 2024-09-14T11:34:00Z,7.64,NA,NoFrills,Medium Size Free-Range Brown Eggs
 2024-09-15T14:51:00Z,7.64,NA,NoFrills,Medium Size Free-Range Brown Eggs
@@ -19692,19 +19145,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,7.68,NA,NoFrills,Medium Size Free-Range Brown Eggs
 2024-03-02T16:06:00Z,7.68,NA,NoFrills,Medium Size Free-Range Brown Eggs
 2024-03-03T16:06:00Z,7.68,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-03-05T16:05:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-03-06T16:12:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-03-08T16:05:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-03-09T16:06:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-03-10T16:08:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-03-18T22:53:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-03-19T09:37:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-03-20T10:43:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-03-21T09:37:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-03-22T10:00:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-03-23T08:48:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-03-24T09:42:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
-2024-03-25T07:59:00Z,NA,NA,NoFrills,Medium Size Free-Range Brown Eggs
 2024-03-26T09:10:00Z,7.68,NA,NoFrills,Medium Size Free-Range Brown Eggs
 2024-03-26T09:30:00Z,7.68,NA,NoFrills,Medium Size Free-Range Brown Eggs
 2024-03-27T09:33:00Z,7.68,NA,NoFrills,Medium Size Free-Range Brown Eggs
@@ -19871,7 +19311,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:11:00Z,5.63,NA,NoFrills,"Nature's Best White Eggs, Large"
 2024-09-09T14:23:00Z,5.63,NA,NoFrills,"Nature's Best White Eggs, Large"
 2024-09-10T09:51:00Z,5.63,NA,NoFrills,"Nature's Best White Eggs, Large"
-2024-09-12T11:23:00Z,NA,NA,NoFrills,"Nature's Best White Eggs, Large"
 2024-09-13T10:58:00Z,5.63,NA,NoFrills,"Nature's Best White Eggs, Large"
 2024-09-14T11:41:00Z,5.63,NA,NoFrills,"Nature's Best White Eggs, Large"
 2024-09-15T14:58:00Z,5.63,NA,NoFrills,"Nature's Best White Eggs, Large"
@@ -19938,19 +19377,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,5.58,NA,NoFrills,"Nature's Best White Eggs, Large"
 2024-03-02T16:06:00Z,5.58,NA,NoFrills,"Nature's Best White Eggs, Large"
 2024-03-03T16:06:00Z,5.58,NA,NoFrills,"Nature's Best White Eggs, Large"
-2024-03-05T16:05:00Z,NA,NA,NoFrills,"Nature's Best White Eggs, Large"
-2024-03-06T16:12:00Z,NA,NA,NoFrills,"Nature's Best White Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,NoFrills,"Nature's Best White Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,NoFrills,"Nature's Best White Eggs, Large"
-2024-03-10T16:08:00Z,NA,NA,NoFrills,"Nature's Best White Eggs, Large"
-2024-03-18T22:53:00Z,NA,NA,NoFrills,"Nature's Best White Eggs, Large"
-2024-03-19T09:37:00Z,NA,NA,NoFrills,"Nature's Best White Eggs, Large"
-2024-03-20T10:43:00Z,NA,NA,NoFrills,"Nature's Best White Eggs, Large"
-2024-03-21T09:37:00Z,NA,NA,NoFrills,"Nature's Best White Eggs, Large"
-2024-03-22T10:00:00Z,NA,NA,NoFrills,"Nature's Best White Eggs, Large"
-2024-03-23T08:48:00Z,NA,NA,NoFrills,"Nature's Best White Eggs, Large"
-2024-03-24T09:42:00Z,NA,NA,NoFrills,"Nature's Best White Eggs, Large"
-2024-03-25T07:58:00Z,NA,NA,NoFrills,"Nature's Best White Eggs, Large"
 2024-03-26T09:10:00Z,5.58,NA,NoFrills,"Nature's Best White Eggs, Large"
 2024-03-26T09:30:00Z,5.58,NA,NoFrills,"Nature's Best White Eggs, Large"
 2024-03-27T09:33:00Z,5.58,NA,NoFrills,"Nature's Best White Eggs, Large"
@@ -20116,7 +19542,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:11:00Z,6.13,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
 2024-09-09T14:23:00Z,6.13,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
 2024-09-10T09:51:00Z,6.13,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
-2024-09-12T11:23:00Z,NA,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
 2024-09-13T10:58:00Z,6.13,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
 2024-09-14T11:42:00Z,6.13,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
 2024-09-15T14:58:00Z,6.13,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
@@ -20183,19 +19608,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,6.08,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
 2024-03-02T16:06:00Z,6.08,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
 2024-03-03T16:06:00Z,6.08,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
-2024-03-05T16:05:00Z,NA,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
-2024-03-06T16:12:00Z,NA,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
-2024-03-10T16:08:00Z,NA,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
-2024-03-18T22:53:00Z,NA,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
-2024-03-19T09:37:00Z,NA,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
-2024-03-20T10:43:00Z,NA,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
-2024-03-21T09:37:00Z,NA,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
-2024-03-22T10:00:00Z,NA,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
-2024-03-23T08:48:00Z,NA,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
-2024-03-24T09:42:00Z,NA,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
-2024-03-25T07:58:00Z,NA,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
 2024-03-26T09:10:00Z,6.08,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
 2024-03-26T09:30:00Z,6.08,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
 2024-03-27T09:33:00Z,6.08,NA,NoFrills,"Naturegg Nest Laid White Eggs, Large"
@@ -20476,7 +19888,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T09:45:00Z,7.43,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
 2024-09-09T13:06:00Z,7.43,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
 2024-09-10T08:27:00Z,7.43,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
-2024-09-11T09:31:00Z,NA,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
 2024-09-13T09:34:00Z,7.43,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
 2024-09-14T10:15:00Z,7.43,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
 2024-09-15T13:31:00Z,7.43,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
@@ -20556,19 +19967,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,7.38,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
 2024-03-02T16:06:00Z,7.38,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
 2024-03-03T16:06:00Z,7.38,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-05T16:05:00Z,NA,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-06T16:12:00Z,NA,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-08T16:05:00Z,NA,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-09T16:06:00Z,NA,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-10T16:08:00Z,NA,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-18T22:53:00Z,NA,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-19T09:37:00Z,NA,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-20T10:43:00Z,NA,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-21T09:37:00Z,NA,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-22T10:00:00Z,NA,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-23T08:48:00Z,NA,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-24T09:42:00Z,NA,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
-2024-03-25T07:58:00Z,NA,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
 2024-03-26T09:10:00Z,7.38,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
 2024-03-26T09:30:00Z,7.38,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
 2024-03-27T09:33:00Z,7.38,NA,NoFrills,Blue Menu Free Run Large White Eggs 12 Pack
@@ -20847,8 +20245,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T10:55:00Z,3.93,NA,NoFrills,Large Grade A Eggs
 2024-09-09T14:10:00Z,3.93,NA,NoFrills,Large Grade A Eggs
 2024-09-10T09:35:00Z,3.93,NA,NoFrills,Large Grade A Eggs
-2024-09-11T10:38:00Z,NA,NA,NoFrills,Large Grade A Eggs
-2024-09-12T11:10:00Z,NA,NA,NoFrills,Large Grade A Eggs
 2024-09-13T10:47:00Z,3.93,NA,NoFrills,Large Grade A Eggs
 2024-09-14T11:25:00Z,3.93,NA,NoFrills,Large Grade A Eggs
 2024-09-15T14:43:00Z,3.93,NA,NoFrills,Large Grade A Eggs
@@ -20928,20 +20324,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,3.88,NA,NoFrills,Large Grade A Eggs
 2024-03-02T16:06:00Z,3.88,NA,NoFrills,Large Grade A Eggs
 2024-03-03T16:06:00Z,3.88,NA,NoFrills,Large Grade A Eggs
-2024-03-05T16:05:00Z,NA,NA,NoFrills,Large Grade A Eggs
-2024-03-06T16:12:00Z,NA,NA,NoFrills,Large Grade A Eggs
-2024-03-07T16:12:00Z,NA,NA,NoFrills,Large Grade A Eggs
-2024-03-08T16:05:00Z,NA,NA,NoFrills,Large Grade A Eggs
-2024-03-09T16:06:00Z,NA,NA,NoFrills,Large Grade A Eggs
-2024-03-10T16:08:00Z,NA,NA,NoFrills,Large Grade A Eggs
-2024-03-18T22:53:00Z,NA,NA,NoFrills,Large Grade A Eggs
-2024-03-19T09:37:00Z,NA,NA,NoFrills,Large Grade A Eggs
-2024-03-20T10:43:00Z,NA,NA,NoFrills,Large Grade A Eggs
-2024-03-21T09:37:00Z,NA,NA,NoFrills,Large Grade A Eggs
-2024-03-22T10:00:00Z,NA,NA,NoFrills,Large Grade A Eggs
-2024-03-23T08:48:00Z,NA,NA,NoFrills,Large Grade A Eggs
-2024-03-24T09:42:00Z,NA,NA,NoFrills,Large Grade A Eggs
-2024-03-25T07:58:00Z,NA,NA,NoFrills,Large Grade A Eggs
 2024-03-26T09:10:00Z,3.88,NA,NoFrills,Large Grade A Eggs
 2024-03-26T09:30:00Z,3.88,NA,NoFrills,Large Grade A Eggs
 2024-03-27T09:33:00Z,3.88,NA,NoFrills,Large Grade A Eggs
@@ -21158,7 +20540,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:11:00Z,6.43,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-09-09T14:23:00Z,6.43,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-09-10T09:51:00Z,6.43,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-09-12T11:23:00Z,NA,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-09-13T10:58:00Z,6.43,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-09-14T11:42:00Z,6.43,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-09-15T14:58:00Z,6.43,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
@@ -21238,19 +20619,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,6.38,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-03-02T16:06:00Z,6.38,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-03-03T16:06:00Z,6.38,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-05T16:05:00Z,NA,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-06T16:12:00Z,NA,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-08T16:05:00Z,NA,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-09T16:06:00Z,NA,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-10T16:08:00Z,NA,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-18T22:53:00Z,NA,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-19T09:37:00Z,NA,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-20T10:43:00Z,NA,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-21T09:37:00Z,NA,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-22T10:00:00Z,NA,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-23T08:48:00Z,NA,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-24T09:42:00Z,NA,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
-2024-03-25T07:58:00Z,NA,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-03-26T09:10:00Z,6.38,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-03-26T09:30:00Z,6.38,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
 2024-03-27T09:33:00Z,6.38,NA,NoFrills,Naturegg NestlaidOmega 3 Large Size 12 Eggs
@@ -21415,7 +20783,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:11:00Z,8.13,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-09-09T14:23:00Z,8.13,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-09-10T09:51:00Z,8.13,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-09-12T11:23:00Z,NA,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-09-13T10:58:00Z,8.13,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-09-14T11:42:00Z,8.13,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-09-15T14:58:00Z,8.13,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
@@ -21495,19 +20862,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,8.08,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-03-02T16:06:00Z,8.08,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-03-03T16:06:00Z,8.08,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-05T16:05:00Z,NA,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-06T16:13:00Z,NA,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-10T16:08:00Z,NA,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-18T22:53:00Z,NA,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-19T09:37:00Z,NA,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-20T10:43:00Z,NA,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-21T09:37:00Z,NA,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-22T10:00:00Z,NA,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-23T08:48:00Z,NA,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-24T09:42:00Z,NA,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
-2024-03-25T07:59:00Z,NA,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-03-26T09:10:00Z,7.99,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-03-26T09:30:00Z,7.99,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
 2024-03-27T09:33:00Z,7.99,NA,NoFrills,"Naturegg Omega Plus Solar Free Range Eggs, Large"
@@ -21672,7 +21026,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-09-08T11:11:00Z,8.13,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
 2024-09-09T14:23:00Z,8.13,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
 2024-09-10T09:51:00Z,8.13,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
-2024-09-12T11:23:00Z,NA,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
 2024-09-13T10:58:00Z,8.13,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
 2024-09-14T11:42:00Z,8.13,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
 2024-09-15T14:58:00Z,8.13,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
@@ -21752,19 +21105,6 @@ nowtime,current_price,old_price,vendor,product_name
 2024-03-01T16:07:00Z,8.08,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
 2024-03-02T16:06:00Z,8.08,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
 2024-03-03T16:06:00Z,8.08,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
-2024-03-05T16:05:00Z,NA,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
-2024-03-06T16:13:00Z,NA,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
-2024-03-08T16:05:00Z,NA,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
-2024-03-09T16:06:00Z,NA,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
-2024-03-10T16:08:00Z,NA,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
-2024-03-18T22:53:00Z,NA,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
-2024-03-19T09:37:00Z,NA,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
-2024-03-20T10:43:00Z,NA,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
-2024-03-21T09:37:00Z,NA,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
-2024-03-22T10:00:00Z,NA,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
-2024-03-23T08:48:00Z,NA,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
-2024-03-24T09:42:00Z,NA,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
-2024-03-25T07:59:00Z,NA,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
 2024-03-26T09:10:00Z,7.99,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
 2024-03-26T09:30:00Z,7.99,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"
 2024-03-27T09:33:00Z,7.99,NA,NoFrills,"Naturegg Solar Free Range Eggs, Large"

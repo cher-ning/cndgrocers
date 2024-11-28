@@ -15,35 +15,17 @@ library(tidyverse)
 #### Clean data ####
 raw <- read_csv("data/01-raw_data/hammer-4-raw.csv")
 product <- read_csv("data/01-raw_data/hammer-4-product.csv")
-raw_data <- 
+merged <- merge(raw, product, by.x = "product_id", by.y = "id")
 
+# cleans column names, filters for only dozen egg item prices
+# then selecting only columns of interest
+egg_merged <- merged |> janitor::clean_names() |> 
+  filter(grepl('Eggs|eggs', product_name), !grepl('Kinder', product_name)) |>
+  filter(grepl('Dozen|dozen|12', product_name) | grepl('12', units)) |>
+  select(nowtime, current_price, old_price, vendor, product_name)
 
-cleaned_data <-
-  raw_data |>
-  janitor::clean_names() |>
-  select(wing_width_mm, wing_length_mm, flying_time_sec_first_timer) |>
-  filter(wing_width_mm != "caw") |>
-  mutate(
-    flying_time_sec_first_timer = if_else(flying_time_sec_first_timer == "1,35",
-                                   "1.35",
-                                   flying_time_sec_first_timer)
-  ) |>
-  mutate(wing_width_mm = if_else(wing_width_mm == "490",
-                                 "49",
-                                 wing_width_mm)) |>
-  mutate(wing_width_mm = if_else(wing_width_mm == "6",
-                                 "60",
-                                 wing_width_mm)) |>
-  mutate(
-    wing_width_mm = as.numeric(wing_width_mm),
-    wing_length_mm = as.numeric(wing_length_mm),
-    flying_time_sec_first_timer = as.numeric(flying_time_sec_first_timer)
-  ) |>
-  rename(flying_time = flying_time_sec_first_timer,
-         width = wing_width_mm,
-         length = wing_length_mm
-         ) |> 
-  tidyr::drop_na()
+cleaned_data <- egg_merged |> 
+  mutate(current_price = as.numeric(current_price))
 
 #### Save data ####
-write_csv(cleaned_data, "outputs/data/analysis_data.csv")
+write_csv(cleaned_data, "data/02-analysis_data/analysis_data.csv")

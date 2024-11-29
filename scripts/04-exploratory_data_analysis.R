@@ -86,6 +86,17 @@ test3_model <-
 
 pp_check(test3_model)
 
+test4_model <- 
+  stan_glm(
+    formula = current_price ~ month + vendor + old_price,
+    data = merged,
+    family = gaussian(),
+    prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
+    prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
+    prior_aux = exponential(rate = 1, autoscale = TRUE),
+    seed = 520
+  )
+
 modelsummary(
   list(
     "Without Prev Month Avg" = test_model,

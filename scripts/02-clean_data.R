@@ -28,12 +28,25 @@ egg_merged <- merged |> janitor::clean_names() |>
   select(nowtime, current_price, old_price, vendor, product_name)
 
 # removes rows that have NA in the current_price or old_price columns, 
-# generalizes nowtime to only month data, removes February entries due to only 
+# generalizes nowtime to only month data, adds column for previous month
+# removes February entries due to only 
 # data from Feb 28 onwards being available
-cleaned_data <- egg_merged |> drop_na(current_price) |> drop_na(old_price) |>
-  mutate(current_price = as.numeric(current_price), month = month.abb[month(nowtime)]) |>
+cleaned <- egg_merged |> drop_na() |>
+  mutate(current_price = as.numeric(current_price), 
+         old_price = as.numeric(old_price),
+         prev_month = month.abb[month(nowtime) - 1],
+         month = month.abb[month(nowtime)]) |>
   filter(month != 'Feb') |> select(-nowtime) 
 
+# calculates monthly average prices across all vendors
+month_avg <- cleaned %>%
+  group_by(month) %>%
+  summarize(month_avgprice = mean(current_price))
+
+merge_clean <- merge(cleaned, month_avg, by.x = "prev_month", by.y = "month", all.x = TRUE) %>%
+  rename("prev_month_avg" = "month_avgprice") |> 
+  mutate(month = as.factor(month), vendor = as.factor(vendor)) |> select(-prev_month)
+
 #### Save data ####
-write_csv(cleaned_data, "data/02-analysis_data/analysis_data.csv")
-write_parquet(x = cleaned_data, sink = "data/02-analysis_data/analysis_data.parquet")
+write_csv(merge_clean, "data/02-analysis_data/analysis_data.csv")
+write_parquet(x = merge_clean, sink = "data/02-analysis_data/analysis_data.parquet")

@@ -18,31 +18,37 @@ analysis_data <- read_csv("data/02-analysis_data/analysis_data.csv")
 
 ### Model data ####
 
-# Convert variables to factors
-analysis_data <- analysis_data %>% 
-  mutate(month = as.factor(month), vendor = as.factor(vendor))
-
-set.seed(520)
-
-
-
-### PROF EXAMPLE ####
-first_model <-
+# Create models
+bayes_model <- 
   stan_glm(
-    formula = flying_time ~ length + width,
+    formula = current_price ~ month + vendor,
     data = analysis_data,
     family = gaussian(),
     prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
     prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
     prior_aux = exponential(rate = 1, autoscale = TRUE),
-    seed = 853
+    seed = 520
   )
 
+pp_check(bayes_model)
+summary(bayes_model)
 
-#### Save model ####
+
+lm_model <- 
+  lm(
+    formula = current_price ~ month + vendor,
+    data = analysis_data
+  )
+
+summary(lm_model)
+
+#### Save model 1 ####
 saveRDS(
-  first_model,
-  file = "models/first_model.rds"
+  bayes_model,
+  file = "models/bayes_model.rds"
 )
 
-
+saveRDS(
+  lm_model,
+  file = "models/lm_model.rds"
+)

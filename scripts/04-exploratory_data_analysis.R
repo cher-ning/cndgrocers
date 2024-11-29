@@ -25,7 +25,7 @@ analysis_data <- analysis_data %>%
 
 set.seed(520)
 
-
+# Model 1: Bayes
 test1_model <- 
   stan_glm(
     formula = current_price ~ month + vendor + old_price,
@@ -40,6 +40,8 @@ test1_model <-
 pp_check(test1_model)
 
 
+## Model 2: linear regession model
+
 test2_model <- 
   lm(
     formula = current_price ~ month + vendor + old_price,
@@ -47,6 +49,7 @@ test2_model <-
   )
 
 summary(test2_model) # R squared = 0.8085, adj = 0.806
+
 
 # Model 3: Bayes, with account for prev month avg
 
@@ -63,7 +66,8 @@ test3_model <-
 
 pp_check(test3_model)
 
-
+# t1 R square = 0.807, adj = 0.804
+# t3 R square = 0.813, adj = 0.810
 modelsummary(
   list(
     "Without Prev Month Avg" = test1_model,

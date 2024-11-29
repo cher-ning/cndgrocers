@@ -19,9 +19,9 @@ analysis_data <- read_csv("data/02-analysis_data/analysis_data.csv")
 ### Model data ####
 
 # Create models
-bayes_model <- 
+bayes_model1 <- 
   stan_glm(
-    formula = current_price ~ month + vendor,
+    formula = current_price ~ month + vendor + old_price,
     data = analysis_data,
     family = gaussian(),
     prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
@@ -30,25 +30,24 @@ bayes_model <-
     seed = 520
   )
 
-pp_check(bayes_model)
-summary(bayes_model)
-
-
-lm_model <- 
-  lm(
-    formula = current_price ~ month + vendor,
-    data = analysis_data
+bayes_model2 <-
+  stan_glm(
+    formula = current_price ~ month + vendor + old_price + prev_month_avg,
+    data = analysis_data,
+    family = gaussian(),
+    prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
+    prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
+    prior_aux = exponential(rate = 1, autoscale = TRUE),
+    seed = 520
   )
 
-summary(lm_model)
-
-#### Save model 1 ####
+#### Save models ####
 saveRDS(
-  bayes_model,
-  file = "models/bayes_model.rds"
+  bayes_model1,
+  file = "models/bayes_model1.rds"
 )
 
 saveRDS(
-  lm_model,
-  file = "models/lm_model.rds"
+  bayes_model2,
+  file = "models/bayes_model2.rds"
 )

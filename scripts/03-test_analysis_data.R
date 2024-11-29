@@ -45,17 +45,17 @@ test_that("'current_price' is numeric", {
 
 # Test that the 'old_price' column is numeric, or NA
 test_that("'old_price' is numeric or NA", {
-  expect_true(all(is.numeric(analysis_data$old_price) | is.na(analysis_data$old_price)))
+  expect_true(all(is.numeric(analysis_data$old_price)))
 })
 
-# Test that there are no missing values in the current_price column
-test_that("no missing values in current_price", {
-  expect_true(all(!is.na(analysis_data$current_price)))
+# Test that there are no missing values in the current_price and old_price columns
+test_that("no missing values in current_price and old_price", {
+  expect_true(all(!is.na(analysis_data$current_price) & !is.na(analysis_data$old_price)))
 })
 
 # Test that 'current_price' and 'old_price' contains no negative values
 test_that("no negative values in 'current_price' and 'old_price'", {
-  expect_true(all(analysis_data$current_price >= 0 & analysis_data$old_price >= 0 | is.na(analysis_data$old_price)))
+  expect_true(all(analysis_data$current_price >= 0 & analysis_data$old_price >= 0))
 })
 
 # Test that 'vendor' contains only valid vendor names
@@ -65,10 +65,10 @@ test_that("'vendor' contains valid vendor names", {
   expect_true(all(analysis_data$vendor %in% valid_vendors))
 })
 
-# Test that there are no empty strings in 'vendor', 'month', 'product_name', or 'current_price' columns
-test_that("no empty strings in 'vendor', 'month', 'product_name', or 'current_price' columns", {
+# Test that there are no empty strings in 'vendor', 'month', 'product_name' columns
+test_that("no empty strings in 'vendor', 'month', 'product_name' columns", {
   expect_false(any(analysis_data$vendor == "" | analysis_data$month == "" | 
-                     analysis_data$product_name == "" | analysis_data$current_price == ""))
+                     analysis_data$product_name == ""))
 })
 
 # Test that 'month' column is a valid month, between March and November inclusive

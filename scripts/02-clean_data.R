@@ -24,13 +24,13 @@ merged <- merge(raw, product, by.x = "product_id", by.y = "id")
 egg_merged <- merged |> janitor::clean_names() |> 
   filter(grepl('Eggs|eggs', product_name), !grepl('Kinder', product_name)) |>
   filter(grepl('Dozen|dozen|12', product_name) | grepl('12', units)) |>
-  filter(current_price >= 0, old_price >= 0 | is.na(old_price)) |>
+  filter(current_price >= 0, old_price >= 0) |>
   select(nowtime, current_price, old_price, vendor, product_name)
 
-# removes rows that have NA in the current_price column, generalizes nowtime to
-# only month data, removes February entries due to only data from Feb 28
-# onwards being available
-cleaned_data <- egg_merged |> drop_na(current_price) |>
+# removes rows that have NA in the current_price or old_price columns, 
+# generalizes nowtime to only month data, removes February entries due to only 
+# data from Feb 28 onwards being available
+cleaned_data <- egg_merged |> drop_na(current_price) |> drop_na(old_price) |>
   mutate(current_price = as.numeric(current_price), month = month.abb[month(nowtime)]) |>
   filter(month != 'Feb') |> select(-nowtime) 
 

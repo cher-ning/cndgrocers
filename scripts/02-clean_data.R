@@ -44,8 +44,7 @@ month_avg <- cleaned %>%
   summarize(month_avgprice = mean(current_price))
 
 merge_clean <- merge(cleaned, month_avg, by.x = "prev_month", by.y = "month", all.x = TRUE) %>%
-  rename("prev_month_avg" = "month_avgprice") |> 
-  mutate(month = as.factor(month), vendor = as.factor(vendor)) |> select(-prev_month)
+  rename("prev_month_avg" = "month_avgprice") |> select(-prev_month)
 
 #### Save data ####
 write_csv(merge_clean, "data/02-analysis_data/analysis_data.csv")

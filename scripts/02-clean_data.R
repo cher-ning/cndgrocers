@@ -7,11 +7,12 @@
 # License: MIT
 # Pre-requisites: Have downloaded and unzipped the raw data CSV files from 
 #   Project Hammer, and placed them into data/01-raw_data/.
-#   The `tidyverse` package must be installed.
+#   The `tidyverse`, `arrow` packages must be installed.
 # Any other information needed? 
 
 #### Workspace setup ####
 library(tidyverse)
+library(arrow) # for saving file as parquet
 
 #### Clean data ####
 raw <- read_csv("data/01-raw_data/hammer-4-raw.csv")
@@ -34,3 +35,4 @@ cleaned_data <- egg_merged |> drop_na(current_price) |>
 
 #### Save data ####
 write_csv(cleaned_data, "data/02-analysis_data/analysis_data.csv")
+write_parquet(x = cleaned_data, sink = "data/02-analysis_data/analysis_data.parquet")

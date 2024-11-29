@@ -19,11 +19,12 @@ raw <- read_csv("data/01-raw_data/hammer-4-raw.csv")
 product <- read_csv("data/01-raw_data/hammer-4-product.csv")
 merged <- merge(raw, product, by.x = "product_id", by.y = "id")
 
-# cleans column names, filters for only dozen egg item prices
-# then selecting only columns of interest
+# cleans column names, filters for only dozen egg item prices, filters out
+#   negative price listings, then selecting only columns of interest
 egg_merged <- merged |> janitor::clean_names() |> 
   filter(grepl('Eggs|eggs', product_name), !grepl('Kinder', product_name)) |>
   filter(grepl('Dozen|dozen|12', product_name) | grepl('12', units)) |>
+  filter(current_price >= 0, old_price >= 0 | is.na(old_price)) |>
   select(nowtime, current_price, old_price, vendor, product_name)
 
 # removes rows that have NA in the current_price column, generalizes nowtime to

@@ -53,6 +53,11 @@ test_that("no missing values in current_price", {
   expect_true(all(!is.na(analysis_data$current_price)))
 })
 
+# Test that 'current_price' and 'old_price' contains no negative values
+test_that("no negative values in 'current_price' and 'old_price'", {
+  expect_true(all(analysis_data$current_price >= 0 & analysis_data$old_price >= 0 | is.na(analysis_data$old_price)))
+})
+
 # Test that 'vendor' contains only valid vendor names
 valid_vendors <- c("Galleria", "TandT", "Voila", "Loblaws", "Metro", 
                   "NoFrills", "SaveOnFoods", "Walmart")

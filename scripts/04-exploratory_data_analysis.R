@@ -13,9 +13,12 @@
 library(tidyverse)
 library(rstanarm)
 library(modelsummary)
+library(arrow)
+library(here)
 
 #### Read data ####
-analysis_data <- read_csv("data/02-analysis_data/analysis_data.csv")
+# analysis_data <- read_csv("data/02-analysis_data/analysis_data.csv")
+analysis_data <- read_parquet(file = here("data/02-analysis_data/analysis_data.parquet"), show_col_types = FALSE)
 
 ### Model data ####
 
@@ -38,7 +41,7 @@ test1_model <-
   )
 
 pp_check(test1_model)
-
+summary(test1_model)
 
 ## Model 2: linear regession model
 
@@ -65,6 +68,7 @@ test3_model <-
   )
 
 pp_check(test3_model)
+summary(test3_model)
 
 # t1 R square = 0.807, adj = 0.804
 # t3 R square = 0.813, adj = 0.810

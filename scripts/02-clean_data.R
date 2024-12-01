@@ -47,5 +47,5 @@ merge_clean <- merge(cleaned, month_avg, by.x = "prev_month", by.y = "month", al
   rename("prev_month_avg" = "month_avgprice") |> select(-prev_month)
 
 #### Save data ####
-write_csv(merge_clean, "data/02-analysis_data/analysis_data.csv")
+# write_csv(merge_clean, "data/02-analysis_data/analysis_data.csv")
 write_parquet(x = merge_clean, sink = "data/02-analysis_data/analysis_data.parquet")

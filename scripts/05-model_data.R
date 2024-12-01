@@ -12,9 +12,13 @@
 #### Workspace setup ####
 library(tidyverse)
 library(rstanarm)
+library(arrow)
+library(here)
 
 #### Read data ####
-analysis_data <- read_csv("data/02-analysis_data/analysis_data.csv")
+#analysis_data <- read_csv("data/02-analysis_data/analysis_data.csv")
+analysis_data <- read_parquet(file = here("data/02-analysis_data/analysis_data.parquet"), show_col_types = FALSE)
+
 
 ### Model data ####
 

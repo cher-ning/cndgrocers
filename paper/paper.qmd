@@ -54,19 +54,11 @@ The estimand that is targetted within this paper's analysis is the price of a do
 
 ## Overview
 
-The dataset used for this paper's analysis is titled "Canadian Grocery Price Data" and was obtained from Project Hammer [@projecthammer], which compiles grocery store price listings across the 8 major Canadian Grocers — Voila, T&T, Loblaws, No Frills, Metro, Galleria, Walmart, and Save-On-Foods. The dataset contains data starting from February 28, 2024 and is updated regularly with the addition of new entries. Only the entries up until November 25, 2024 are included within this paper's analysis.
+The dataset used for this paper's analysis is titled "Canadian Grocery Price Data" and was obtained from Project Hammer [@projecthammer], which compiles grocery store price listings across the 8 major Canadian Grocers — Voila, T&T, Loblaws, No Frills, Metro, Galleria, Walmart, and Save-On-Foods. The dataset contains data starting from February 28, 2024 and is updated regularly with the addition of new entries. Only the entries up until November 25, 2024 are considered within this paper.
 
 The dataset was downloaded as two separate csv files titled `hammer-4-product.csv` and `hammer-4-raw.csv`. The `product` table includes information about specific products that are available across the different grocers, with unique product ID numbers to identify each listing at each grocer. The `raw` table includes the price and more time-specific information regarding each product's listing. The two tables were joined by matching the product IDs to create the full dataset, a comprehensive table where each entry holds all the necessary product and listing information. 
 
-Under the guidance of @tellingstories, the R programming language [@citeR] was used for analysis of this dataset. The package `tidyverse` [@tidyverse] was used to simulate data and test the simulated data before analysis. Packages `tidyverse` [@tidyverse] and `arrow` [@arrow] were utilized to clean the full raw dataset,  which were then also used alongside packages `testthat` [@testthat] and `here` [@here] to test the cleaned dataset. Lastly, packages `tidyverse` [@tidyverse], `rstanarm` [@rstanarm], `arrow` [@arrow], and `here` [@here] were used to build predictive models using the cleaned dataset. 
-
-## Measurement
-
-The observations in the dataset are scraped from the grocer's official website's interface, which means it only contains the information that is publically listed and available. The recorded prices for each item are the listed price for the "in store pick up" option, with the target pickup neighbourhood being a neighbourhood in Toronto. Certain values and listings may be missed, since the internal APIs that power the grocer's websites are not accessed and specific extracts may error for certain vendors on particular days for unforeseeable reasons. Starting from July 11, the targetted variety of grocery items for data collection was greatly increased, meaning that there may be products which are missing pricing information before then.
-
-## Data-Cleaning
-
-After combining the two tables, `raw` and `product`, by matching each entry's product ID, the full dataset with $12,753,964$ entries was created. Then, entries with "egg" or "eggs", and "dozen" or "12" appearing in their product name or units were selected for. All February entries were omitted from analysis due to data collection starting on 28 February, 2024, which means there is a lack of sufficient data for that month to make any reliable conclusions from. The relevant variables of interest to us are: `nowtime`, `vendor`, `current_price`, `old_price`, and `product_name`, as explained below:
+The relevant variables of interest to us are: `nowtime`, `vendor`, `current_price`, `old_price`, and `product_name`, as explained below:
 
 - **nowtime**: Date and time of when the data was collected
 - **vendor**: One of the 8 Canadian grocery vendors
@@ -74,62 +66,131 @@ After combining the two tables, `raw` and `product`, by matching each entry's pr
 - **old_price**: An 'old' struck-out price, indicating the item's regular pre-sale price
 - **product_name**: Product name, may include brand and/or units
 
-For ease of analysis, some additional variables were derived. 
+For ease of analysis, these additional variables were derived:
 
 - **month**: The month of when a data entry was collected; extracted from `nowtime`
 - **prev_month_avg**: The average price of a dozen eggs across all vendors during the previous month
 
-All entries with empty values in any of these key variables were dropped. It is important to note that this would filter out any unannounced price changes, as only price decreases for an explicitly advertised sale event would include both `current_price` and `old_price` variables. The first 5 rows from the cleaned dataset along with these derived variables is shown in @fig-datahead.
+All entries with empty values in any of these key variables were dropped. Further details regarding the data cleaning process and a glimpse of the first 5 rows of the final cleaned dataset can be found in @sec-data-cleaning.
+
+Under the guidance of @tellingstories, the R programming language [@citeR] was used for analysis of this dataset. The package `tidyverse` [@tidyverse] was used to simulate data and test the simulated data before analysis. Packages `tidyverse` [@tidyverse] and `arrow` [@arrow] were utilized to clean the full raw dataset,  which were then also used alongside packages `testthat` [@testthat] and `here` [@here] to test the cleaned dataset. Lastly, packages `tidyverse` [@tidyverse], `rstanarm` [@rstanarm], `arrow` [@arrow], and `here` [@here] were used to build predictive models using the cleaned dataset. 
+
+## Measurement
+
+The observations in the dataset are scraped from the grocer's official website's interface, which means it only contains the information that is publically listed and available. The recorded prices for each item are the listed price for the "in store pick up" option, with the target pickup neighbourhood being a neighbourhood in Toronto. Certain values and listings may be missed, since the internal APIs that power the grocer's websites are not accessed and specific extracts may error for certain vendors on particular days for unforeseeable reasons. Starting from July 11, the targeted variety of grocery items for data collection was greatly increased, meaning that there may be products which are missing pricing information before then.
+
+## Variables of Interest
+
+The outcome variable that we are interested in understanding is the `current_price`, representing the sale price of a dozen eggs. The predictor variables are `month`, `vendor`, `old_price`, and `prev_month_avg`. 
+
+@fig-vendorprices shows a boxplot of the sale pricing of a dozen eggs across the 8 vendors. From this graph, we can observe that T&T has the lowest prices overall and Save On Foods the highest. There are also differences in the range of prices offered, with T&T and Metro having much wider price ranges compared to Galleria and Save On Foods, which have highly consistent sale pricing. 
 
 ```{r}
-#| label: fig-datahead
-#| fig-cap: Sample of Analysis Data
-#| fig-align: center
+#| label: fig-vendorprices
+#| fig-cap: Average Sale Price of a Dozen Eggs Across Vendors
 #| echo: false
 #| warning: false
 #| message: false
 
-kable(head(analysis_data, 5)) %>% 
-  kable_styling(
-    font_size = 10,
-    latex_options = c("scale_down"),
-    full_width = FALSE,
-    position = "center"
-  ) %>% 
-  column_spec(4, width = "15em")
-
+analysis_data |> 
+  ggplot(aes(x = vendor, y = current_price)) +
+  geom_boxplot(outlier.colour="black", outlier.shape=16,
+             outlier.size=2, notch=FALSE) +
+  theme_classic() +
+  labs(x = "Vendor",
+       y = "Sale Price of a Dozen Eggs")
 ```
 
+Next, @fig-monthprices shows the average sale price of a dozen eggs across different months. It can be observed that price dips slightly during the summer, reaching its lowest in July, before increasing again. Differences throughout months are typically gradual and do not fluctuate very much. 
 
-## Outcome variables
-
-Add graphs, tables and text. Use sub-sub-headings for each outcome variable or update the subheading to be singular.
 
 ```{r}
-#| label: fig-planes
-#| fig-cap: Relationship between wing length and width
+#| label: fig-monthprices
+#| fig-cap: Average Sale Price of a Dozen Eggs Across Months March to November
 #| echo: false
 #| warning: false
 #| message: false
 
-#analysis_data |> 
-#  ggplot(aes(x = width, y = length)) +
-#  geom_point(alpha = 0.8) +
-#  theme_minimal() +
-#  labs(x = "Wing width (mm)",
-#       y = "Wing length (mm)")
+price_permonth <- analysis_data %>% 
+  select(-prev_month_avg) %>%
+  group_by(month) %>%
+  summarize(avg_price = mean(current_price, na.rm = TRUE))
+
+price_permonth <- price_permonth %>%
+  mutate(month = recode(month,
+                        Mar = 3,
+                        Apr = 4,
+                        May = 5,
+                        Jun = 6,
+                        Jul = 7,
+                        Aug = 8, 
+                        Sep = 9,
+                        Oct = 10,
+                        Nov = 11))
+
+#locks in months in chronological order
+price_permonth <- price_permonth[order(price_permonth$month, decreasing = FALSE),]
+
+
+#converts back to month name while keeping order
+price_permonth$month <- month.abb[price_permonth$month]
+price_permonth$month <- factor(price_permonth$month, levels = price_permonth$month)
+
+price_permonth |> 
+  ggplot(mapping = aes(x = month, y = avg_price)) +
+  geom_col() + 
+  theme_classic() +
+  labs(x = "Month",
+       y = "Average Sale Price of a Dozen Eggs")
 ```
 
-Talk way more about it. 
+@fig-oldvsnew shows the positive and relatively linear relationship between the original presale price and discounted price of a dozen eggs across all 8 vendors. The dotted line has a slope of 1 and indicates how prices would look if discounted prices are equal to presale prices. All data points are on or below the dotted line, indicating that discounted prices are always equal to or less than the original presale price. The blue line, representing the line of best fit, has a positive but smaller slope than the dotted line, indicating that sale prices increase at a slower rate than presale prices. In other words, the greater an item's presale price, the greater the price difference would be. This confirms our intuitions about how sale events occur in the real world, as sales are typically calculated as a percentage of the original price. 
 
-## Predictor variables
+```{r}
+#| label: fig-oldvsnew
+#| fig-cap: Presale and Sale Prices of a Dozen Eggs
+#| echo: false
+#| warning: false
+#| message: false
 
-Add graphs, tables and text.
+analysis_data |> 
+  ggplot(aes(x = old_price, y = current_price)) +
+  geom_jitter() + 
+  geom_smooth(method = lm, se = FALSE) +
+  geom_abline(intercept = 0, slope = 1, show.legend = TRUE, linetype = "dashed") +
+  theme_classic() +
+  labs(x = "Presale Price",
+       y = "Sale Price") 
 
-Use sub-sub-headings for each outcome variable and feel free to combine a few into one if they go together naturally.
+```
 
 
+@fig-prevmonth shows the relationship between the current sale price of a dozen eggs compared to the previous month's average price. Similar to @fig-oldvsnew, the dotted line has a slope of 1 and indicates variables growing at an equal rate whereas the blue line represents the line of best fit. Here, in contrast to @fig-oldvsnew, the relationship appears much weaker with a greater scatter and deviation of values. The line of best fit has a positive slope that is less than 1, indicating that current sale prices increase when previous month's prices do, but at a slower rate. That is, a higher price average in the previous month is correlated with higher prices in the current month, but not to a high degree.
 
+
+```{r}
+#| label: fig-prevmonth
+#| fig-cap: Sale Price of a Dozen Eggs vs Previous Month's Average Price
+#| echo: false
+#| warning: false
+#| message: false
+
+
+analysis_data |> 
+  ggplot(aes(x = prev_month_avg, y = current_price)) +
+  geom_jitter(alpha = 0.5) +
+  geom_smooth(method = lm, se = FALSE) +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed") +
+  theme_classic() +
+  labs(x = "Previous Month's Average Price of a Dozen Eggs",
+       y = "Sale Price") 
+
+```
+
+
+## Other Datasets
+
+There are other food pricing related datasets available for use, such as Statistics Canada's "Average Retail Food Prices" [@otherdataset]. Though it does also contain average price information for a dozen eggs, this dataset was not utilized within this paper's analysis in the end because it only contains monthly averages that are also not divided by vendor. As well, the averages in this dataset are generalized across the entire provinces, in contrast to Project Hammer's dataset which is centred on Toronto prices [@projecthammer]. This could introduce inaccuracies into our model, as the wider geographical range may be failing to capture Toronto's comparatively higher cost of living, compared to other Ontario regions. 
 
 # Model
 
@@ -206,9 +267,35 @@ Weaknesses and next steps should also be included.
 # Appendix {-}
 
 
-# Additional data details {#sec-data-details}
+# Additional data details 
 
-!!! ADD FIRST 5 ROWS DATA HERE
+## Data-Cleaning {#sec-data-cleaning}
+
+After combining the two tables, `raw` and `product`, by matching each entry's product ID, the full dataset with $12,753,964$ entries was created. Then, entries with "egg" or "eggs", and "dozen" or "12" appearing in their product name or units were selected for. All February entries were omitted from analysis due to data collection starting on 28 February, 2024, which means there is a lack of sufficient data for that month to make any reliable conclusions from. 
+
+All unannounced price changes, including increases or decreases, have only a `current_price` value and empty `old_price` values, so all such entries were filtered out to narrow down analysis onto explicitly advertised sale events only. Then, the `current_price` and `old_price` columns were filtered to ensure all values were non-negative, as these entries are evidently the result of measurement error during data scraping. 
+
+After cleaning the dataset and adding in the derived variables, the final dataset of $1,278$ entries is what analysis will be conducted on. The first 5 rows from this analysis data is shown in @fig-datahead.
+
+```{r}
+#| label: fig-datahead
+#| fig-cap: Sample of Analysis Data
+#| fig-align: center
+#| echo: false
+#| warning: false
+#| message: false
+
+kable(head(analysis_data, 5)) %>% 
+  kable_styling(
+    font_size = 10,
+    latex_options = c("scale_down"),
+    full_width = FALSE,
+    position = "center"
+  ) %>% 
+  column_spec(4, width = "15em")
+
+```
+
 
 # Model details {#sec-model-details}
 
@@ -233,7 +320,7 @@ pp_check(model1) +
   theme(legend.position = "bottom")
 
 posterior_vs_prior(model1) +
-  theme_minimal() +
+  theme_classic() +
   scale_color_brewer(palette = "Set1") +
   theme(legend.position = "bottom") +
   coord_flip()

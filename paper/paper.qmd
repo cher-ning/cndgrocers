@@ -30,8 +30,7 @@ library(kableExtra)
 analysis_data <- read_parquet(file = here("data/02-analysis_data/analysis_data.parquet"), show_col_types = FALSE)
 
 # Read in models
-model1 <- readRDS(file = here("models/bayes_model1.rds"))
-model2 <- readRDS(file = here("models/bayes_model2.rds"))
+model <- readRDS(file = here("models/lm_model1.rds"))
 ```
 
 
@@ -174,7 +173,7 @@ price_permonth |>
 
 analysis_data |> 
   ggplot(aes(x = old_price, y = current_price)) +
-  geom_jitter() + 
+  geom_jitter(alpha = 0.3) + 
   geom_smooth(method = lm, se = FALSE) +
   geom_abline(intercept = 0, slope = 1, show.legend = TRUE, linetype = "dashed") +
   theme_classic() +
@@ -215,32 +214,25 @@ There are other food pricing related datasets available for use, such as Statist
 
 The goal of our modeling is to understand how the predictor variables — month, vendor, presale price, and previous month's average sale price — affects the response variable of current price. For this paper, a multiple linear regression model will be utilized.
 
-## Model set-up
+We define $Y_i$ as the current price, and initialize the full model as: $Y_i = \beta_0 + \beta_1 month + \beta_2 vendor + \beta_3 old\_price * prev\_month\_avg$
 
-Define $y_i$ as the current price. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
+We create the model in R [@citeR], with help from package `tidyverse` [@tidyverse].
 
-\begin{align} 
-y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
-\mu_i &= \alpha + \beta_i + \gamma_i\\
-\alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta &\sim \mbox{Normal}(0, 2.5) \\
-\gamma &\sim \mbox{Normal}(0, 2.5) \\
-\sigma &\sim \mbox{Exponential}(1)
-\end{align}
+### Model Weaknesses
 
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
+The first weakness of this model is that it assumes a linear relationship between the discounted price and the list of predictor variables. This oversimplication could be missing many aspects of their true relationship if it is nonlinear. As well, there could be real-world events such as economic changes or policy changes which could have significant impact on pricing, but this model would fail to capture these influences. 
 
+Additionally, due to the targeting of dozen egg items within this analysis, it has also caused our dataset to be quite small with less than two thousand data points. Though this decision to focus in on one type of item helps narrow down the scope of analysis and increase the generalizability of findings, the small dataset size may simultaneously have the opposite effect in decreasing accuracy. 
 
-### Model justification
+Another weakness is that the dataset does not include information for every month of the year. Due to the lack of entries in February, there is also no values to calculate a `prev_month_avg` value for all March listings. This impacts the accuracy of our model because there could be patterns present in the winter months that would not be observable here. 
 
-We expect a positive relationship between the size of the wings and time spent aloft. In particular...
+This model also treats all egg dozens as equivalent, without consideration for other qualities within the item type such as whether it is organic, white or brown eggs, egg size, and brand. Different patterns could be present when these further distinctions are also separated out into their own categories.
 
-We can use maths by including latex between dollar signs, for instance $\theta$.
+Lastly, this dataset is only observational data, and therefore it is insufficient to conclude causality from our current analysis. More details regarding the impact and context of this assumption can be found in @sec-obs-data.
 
+Diagnostics that show the model's weaknesses can be found in @sec-model-diagnostics. 
 
 # Results
-
-Our results are summarized in @tbl-modelresults.
 
 
 ```{r}
@@ -250,13 +242,12 @@ Our results are summarized in @tbl-modelresults.
 #| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
 #| warning: false
 
-#modelsummary::modelsummary(
-#  list(
-#    "First model" = model1
-#  ),
-#  statistic = "mad",
-#  fmt = 2
-#)
+modelsummary::modelsummary(
+  list(
+    "Model Results" = model
+  ),
+  fmt = 2
+)
 ```
 
 
@@ -316,11 +307,7 @@ kable(head(analysis_data, 5)) %>%
 
 # Model details {#sec-model-details}
 
-## Posterior predictive check
 
-In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
-
-In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
 
 ```{r}
 #| eval: true
@@ -332,22 +319,22 @@ In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. Th
 #| fig-cap: "Examining how the model fits, and is affected by, the data"
 #| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
 
-pp_check(model1) +
-  theme_classic() +
-  theme(legend.position = "bottom")
-
-posterior_vs_prior(model1) +
-  theme_classic() +
-  scale_color_brewer(palette = "Set1") +
-  theme(legend.position = "bottom") +
-  coord_flip()
 ```
 
-## Diagnostics
+## Observational Data {#sec-obs-data}
 
-@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
+The dataset used is a compilation of price listings collected from grocery store websites directly, meaning that it is only observational data that was compiled without conducting of an experiment. This means that caution needs to be taken when making conclusions of causation from this data, because we can only be certain of correlation unless thorough tests are conducted. Our conclusions can possibly be affected by two common misconceptions, Simpson's and Berkson's paradoxes. 
 
-@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
+Simpson's paradox is when a subset of data presents a relationship that is different from when the full dataset is considered due to lack of consideration for a confounder variable, which is the true cause of a relationship. Berkson's paradox is when a dataset is so specifically subsetted that patterns found are different from the full dataset [@tellingstories].
+
+Within this paper's context, both paradoxes are at risk of occurring because our analysis is conducted on the subset of only egg dozen listings. Therefore, when making conclusions, it is important to remember that the patterns of correlation between variables observed within our subset of egg prices cannot be generalized to the full dataset of all grocery store listings. For example, it is possible that though in our analysis, T&T offers the lowest discounted prices [@fig-vendorprices] for eggs, they could be offering the highest prices when averaged across all product listings. 
+
+In the same vein, the lack of significant price change around September could also be because of our sampling for egg items. Due to the school semester starting in September, intuition tells us that there are likely many sales going on for school supplies. Therefore, if we did not limit our search to egg dozens only, it is possible that September could show the lowest average prices instead of July, as shown in @fig-monthprices.
+
+This is one weakness inherent to using observational data, that there are many unknown or uncontrolled variables which could impact our analysis. Many errors can occur from making unsupported claims that are generalized beyond the specific subset where analysis was conducted, so care must be taken when interpreting model outcomes. 
+
+## Diagnostics {#sec-model-diagnostics}
+
 
 ```{r}
 #| echo: false
@@ -359,15 +346,11 @@ posterior_vs_prior(model1) +
 #| fig-subcap: ["Trace plot", "Rhat plot"]
 #| layout-ncol: 2
 
-plot(model1, "trace")
-
-plot(model1, "rhat")
 ```
 
 
 
 \newpage
-
 
 # References
 

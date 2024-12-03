@@ -6,7 +6,7 @@
 # License: MIT
 # Pre-requisites:
 # - Have downloaded + cleaned data by running 02-clean_data.R
-# - `tidyverse`, `rstanarm` packages must be installed
+# - `tidyverse`, `arrow`, `here` packages must be installed
 
 
 #### Workspace setup ####
@@ -22,11 +22,8 @@ analysis_data <- read_parquet(file = here("data/02-analysis_data/analysis_data.p
 ### Model data ####
 
 # Create models
-model1 <- 
-  lm(formula = current_price ~ month + vendor + old_price,
-    data = analysis_data)
 
-model2 <- 
+model1 <- 
   lm(formula = current_price ~ month + vendor + old_price*prev_month_avg,
      data = analysis_data)
 
@@ -34,9 +31,4 @@ model2 <-
 saveRDS(
   model1,
   file = "models/lm_model1.rds"
-)
-
-saveRDS(
-  model2,
-  file = "models/lm_model2.rds"
 )

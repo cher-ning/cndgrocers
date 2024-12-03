@@ -12,25 +12,39 @@ bibliography: references.bib
 ---
 
 ```{r}
-#| include: false
+#| echo: false
+#| eval: true
 #| warning: false
 #| message: false
 
 library(tidyverse)
+library(arrow)
+library(here)
+library(ggplot2)
+library(modelsummary)
+library(rstanarm)
+library(knitr)
+
+# Read in analysis_data
+analysis_data <- read_parquet(file = here("data/02-analysis_data/analysis_data.parquet"), show_col_types = FALSE)
+
+# Read in models
+model1 <- readRDS(file = here("models/bayes_model1.rds"))
+model2 <- readRDS(file = here("models/bayes_model2.rds"))
 ```
 
 
 # Introduction
 
-Overview paragraph
+#TODO: Overview paragraph
 
-Estimand paragraph
+The estimand that is targetted within this paper's analysis is the price of a dozen eggs across the 8 top Canadian grocers. 
 
-Results paragraph
+#TODO: Results paragraph
 
-Why it matters paragraph
+#TODO: Why it matters paragraph
 
-Telegraphing paragraph: The remainder of this paper is structured as follows. @sec-data....
+#TODO: Telegraphing paragraph: The remainder of this paper is structured as follows. @sec-data....
 
 
 
@@ -39,33 +53,50 @@ Telegraphing paragraph: The remainder of this paper is structured as follows. @s
 
 ## Overview
 
-We use the statistical programming language R [@citeR].... Our data [@shelter].... Following @tellingstories, we consider...
+The dataset used for this paper's analysis is titled "Canadian Grocery Price Data" and was obtained from Project Hammer [@projecthammer], which compiles grocery store price listings across the 8 major Canadian Grocers — Voila, T&T, Loblaws, No Frills, Metro, Galleria, Walmart, and Save-On-Foods. The dataset contains data starting from February 28, 2024 and is updated regularly with the addition of new entries. Only the entries up until November 25, 2024 are included within this paper's analysis.
 
-Overview text
+The dataset was downloaded as two separate csv files titled `hammer-4-product.csv` and `hammer-4-raw.csv`. The `product` table includes information about specific products that are available across the different grocers, with unique product ID numbers to identify each listing at each grocer. The `raw` table includes the price and more time-specific information regarding each product's listing. The two tables were joined by matching the product IDs to create the full dataset, a comprehensive table where each entry holds all the necessary product and listing information. 
+
+Under the guidance of @tellingstories, the R programming language [@citeR] was used for analysis of this dataset. The package `tidyverse` [@tidyverse] was used to simulate data and test the simulated data before analysis. Packages `tidyverse` [@tidyverse] and `arrow` [@arrow] were utilized to clean the full raw dataset,  which were then also used alongside packages `testthat` [@testthat] and `here` [@here] to test the cleaned dataset. Lastly, packages `tidyverse` [@tidyverse], `rstanarm` [@rstanarm], `arrow` [@arrow], and `here` [@here] were used to build predictive models using the cleaned dataset. 
 
 ## Measurement
-	
-Some paragraphs about how we go from a phenomena in the world to an entry in the dataset.
+
+The observations in the dataset are scraped from the grocer's official website's interface, which means it only contains the information that is publically listed and available. The recorded prices for each item are the listed price for the "in store pick up" option, with the target pickup neighbourhood being a neighbourhood in Toronto. Certain values and listings may be missed, since the internal APIs that power the grocer's websites are not accessed and specific extracts may error for certain vendors on particular days for unforeseeable reasons. Starting from July 11, the targetted variety of grocery items for data collection was greatly increased, meaning that there may be products which are missing pricing information before then.
+
+## Data-Cleaning
+
+After combining the two tables, `raw` and `product`, by matching each entry's unique product ID, the full dataset with $12,753,964$ entries was created. Then, entries with "egg" or "eggs", and "dozen" or "12" appearing in their product name or units were selected for. The `nowtime` variable, which tracks the time when the data was scraped, was generalized to a `month` variable for ease of analysis. All February entries were omitted from analysis due to data collection starting on 28 February, 2024, which means there is a lack of sufficient data for that month to make any reliable conclusions from. Then, calculation for each month's average `current_price` was done and added to each listing of the following month as the variable `prev_month_avg`. 
+
+The relevant variables, as listed and explained in the table below [@tbl-varoverview], was selected for and entries with empty entries in any of these key variables were dropped. It is important to note that this would filter out any unadvertised price changes, as only price decreases for an explicitly advertised sale event would include both `current_price` and `old_price`.
+
+```{r}
+#| label: tbl-varoverview
+#| tbl-cap: Selected Variables Overview
+#| echo: false
+#| warning: false
+#| message: false
+
+columns <- data.frame(
+  Column = c("month", "vendor", "current_price", "old_price", "product_name", "prev_month_avg"),
+  Description = c(
+    "Month of when the data was collected",
+    "One of the 8 Canadian grocery vendors",
+    "Price at time of extract",
+    "An 'old' struck-out price, indicating the item's regular pre-sale price",
+    "Product name, may include brand and/or units",
+    "Average curren_price of a dozen eggs across all vendors, during the month before the data collection"
+  )
+)
+
+kable(columns, caption = NULL)
+
+```
+
+A snapshot of a couple entries from this cleaned dataset can be found in @sec-data-details.
 
 ## Outcome variables
 
 Add graphs, tables and text. Use sub-sub-headings for each outcome variable or update the subheading to be singular.
-
-
-
-Some of our data is of penguins (@fig-bills), from @palmerpenguins.
-
-```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
-#| echo: false
-
-
-```
-
-Talk more about it.
-
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
 
 ```{r}
 #| label: fig-planes
@@ -73,8 +104,6 @@ And also planes (@fig-planes). (You can change the height and width, but don't w
 #| echo: false
 #| warning: false
 #| message: false
-
-analysis_data <- read_csv(here::here("data/02-analysis_data/analysis_data.csv"))
 
 analysis_data |> 
   ggplot(aes(x = width, y = length)) +
@@ -91,10 +120,6 @@ Talk way more about it.
 Add graphs, tables and text.
 
 Use sub-sub-headings for each outcome variable and feel free to combine a few into one if they go together naturally.
-
-
-
-
 
 
 
@@ -132,17 +157,6 @@ We can use maths by including latex between dollar signs, for instance $\theta$.
 
 Our results are summarized in @tbl-modelresults.
 
-```{r}
-#| echo: false
-#| eval: true
-#| warning: false
-#| message: false
-
-library(rstanarm)
-
-first_model <-
-  readRDS(file = here::here("models/first_model.rds"))
-```
 
 ```{r}
 #| echo: false
@@ -153,14 +167,12 @@ first_model <-
 
 modelsummary::modelsummary(
   list(
-    "First model" = first_model
+    "First model" = model1
   ),
   statistic = "mad",
   fmt = 2
 )
 ```
-
-
 
 
 # Discussion
@@ -178,6 +190,7 @@ Please don't use these as sub-heading labels - change them to be what your point
 ## Weaknesses and next steps
 
 Weaknesses and next steps should also be included.
+- maybe should try to specify the prev_month_avg down to also selection by vendor
 
 \newpage
 
@@ -186,7 +199,9 @@ Weaknesses and next steps should also be included.
 # Appendix {-}
 
 
-# Additional data details
+# Additional data details {#sec-data-details}
+
+!!! ADD FIRST 5 ROWS DATA HERE
 
 # Model details {#sec-model-details}
 
@@ -206,11 +221,11 @@ In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. Th
 #| fig-cap: "Examining how the model fits, and is affected by, the data"
 #| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
 
-pp_check(first_model) +
+pp_check(model1) +
   theme_classic() +
   theme(legend.position = "bottom")
 
-posterior_vs_prior(first_model) +
+posterior_vs_prior(model1) +
   theme_minimal() +
   scale_color_brewer(palette = "Set1") +
   theme(legend.position = "bottom") +

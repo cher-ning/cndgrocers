@@ -13,8 +13,10 @@
 library(tidyverse)
 library(testthat)
 library(here)
+library(arrow)
 
-analysis_data <- read_csv(here::here("data/02-analysis_data/analysis_data.csv"), show_col_types = FALSE)
+# analysis_data <- read_csv("data/02-analysis_data/analysis_data.csv")
+analysis_data <- read_parquet(file = here("data/02-analysis_data/analysis_data.parquet"), show_col_types = FALSE)
 
 #### Test data ####
 

@@ -2,7 +2,7 @@
 title: "My title"
 subtitle: "My subtitle if needed"
 author: Cher Ning-Li
-thanks: "Code and data are available at: [https://github.com/cher-ning/cndgrocers)."
+thanks: "Code and data are available at: (https://github.com/cher-ning/cndgrocers)[https://github.com/cher-ning/cndgrocers]."
 date: today
 date-format: long
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
@@ -24,6 +24,7 @@ library(ggplot2)
 library(modelsummary)
 library(rstanarm)
 library(knitr)
+library(kableExtra)
 
 # Read in analysis_data
 analysis_data <- read_parquet(file = here("data/02-analysis_data/analysis_data.parquet"), show_col_types = FALSE)
@@ -65,34 +66,40 @@ The observations in the dataset are scraped from the grocer's official website's
 
 ## Data-Cleaning
 
-After combining the two tables, `raw` and `product`, by matching each entry's unique product ID, the full dataset with $12,753,964$ entries was created. Then, entries with "egg" or "eggs", and "dozen" or "12" appearing in their product name or units were selected for. The `nowtime` variable, which tracks the time when the data was scraped, was generalized to a `month` variable for ease of analysis. All February entries were omitted from analysis due to data collection starting on 28 February, 2024, which means there is a lack of sufficient data for that month to make any reliable conclusions from. Then, calculation for each month's average `current_price` was done and added to each listing of the following month as the variable `prev_month_avg`. 
+After combining the two tables, `raw` and `product`, by matching each entry's product ID, the full dataset with $12,753,964$ entries was created. Then, entries with "egg" or "eggs", and "dozen" or "12" appearing in their product name or units were selected for. All February entries were omitted from analysis due to data collection starting on 28 February, 2024, which means there is a lack of sufficient data for that month to make any reliable conclusions from. The relevant variables of interest to us are: `nowtime`, `vendor`, `current_price`, `old_price`, and `product_name`, as explained below:
 
-The relevant variables, as listed and explained in the table below [@tbl-varoverview], was selected for and entries with empty entries in any of these key variables were dropped. It is important to note that this would filter out any unadvertised price changes, as only price decreases for an explicitly advertised sale event would include both `current_price` and `old_price`.
+- **nowtime**: Date and time of when the data was collected
+- **vendor**: One of the 8 Canadian grocery vendors
+- **current_price**: Price at time of extract
+- **old_price**: An 'old' struck-out price, indicating the item's regular pre-sale price
+- **product_name**: Product name, may include brand and/or units
+
+For ease of analysis, some additional variables were derived. 
+
+- **month**: The month of when a data entry was collected; extracted from `nowtime`
+- **prev_month_avg**: The average price of a dozen eggs across all vendors during the previous month
+
+All entries with empty values in any of these key variables were dropped. It is important to note that this would filter out any unannounced price changes, as only price decreases for an explicitly advertised sale event would include both `current_price` and `old_price` variables. The first 5 rows from the cleaned dataset along with these derived variables is shown in @fig-datahead.
 
 ```{r}
-#| label: tbl-varoverview
-#| tbl-cap: Selected Variables Overview
+#| label: fig-datahead
+#| fig-cap: Sample of Analysis Data
+#| fig-align: center
 #| echo: false
 #| warning: false
 #| message: false
 
-columns <- data.frame(
-  Column = c("month", "vendor", "current_price", "old_price", "product_name", "prev_month_avg"),
-  Description = c(
-    "Month of when the data was collected",
-    "One of the 8 Canadian grocery vendors",
-    "Price at time of extract",
-    "An 'old' struck-out price, indicating the item's regular pre-sale price",
-    "Product name, may include brand and/or units",
-    "Average curren_price of a dozen eggs across all vendors, during the month before the data collection"
-  )
-)
-
-kable(columns, caption = NULL)
+kable(head(analysis_data, 5)) %>% 
+  kable_styling(
+    font_size = 10,
+    latex_options = c("scale_down"),
+    full_width = FALSE,
+    position = "center"
+  ) %>% 
+  column_spec(4, width = "15em")
 
 ```
 
-A snapshot of a couple entries from this cleaned dataset can be found in @sec-data-details.
 
 ## Outcome variables
 
@@ -105,12 +112,12 @@ Add graphs, tables and text. Use sub-sub-headings for each outcome variable or u
 #| warning: false
 #| message: false
 
-analysis_data |> 
-  ggplot(aes(x = width, y = length)) +
-  geom_point(alpha = 0.8) +
-  theme_minimal() +
-  labs(x = "Wing width (mm)",
-       y = "Wing length (mm)")
+#analysis_data |> 
+#  ggplot(aes(x = width, y = length)) +
+#  geom_point(alpha = 0.8) +
+#  theme_minimal() +
+#  labs(x = "Wing width (mm)",
+#       y = "Wing length (mm)")
 ```
 
 Talk way more about it. 
@@ -165,13 +172,13 @@ Our results are summarized in @tbl-modelresults.
 #| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
 #| warning: false
 
-modelsummary::modelsummary(
-  list(
-    "First model" = model1
-  ),
-  statistic = "mad",
-  fmt = 2
-)
+#modelsummary::modelsummary(
+#  list(
+#    "First model" = model1
+#  ),
+#  statistic = "mad",
+#  fmt = 2
+#)
 ```
 
 
@@ -248,9 +255,9 @@ posterior_vs_prior(model1) +
 #| fig-subcap: ["Trace plot", "Rhat plot"]
 #| layout-ncol: 2
 
-plot(first_model, "trace")
+plot(model1, "trace")
 
-plot(first_model, "rhat")
+plot(model1, "rhat")
 ```
 
 

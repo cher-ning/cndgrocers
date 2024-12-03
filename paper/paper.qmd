@@ -101,6 +101,25 @@ analysis_data |>
        y = "Sale Price of a Dozen Eggs")
 ```
 
+@fig-vendorsales shows the number of sales provided on egg dozens, showing a large variation between vendors. Metro notably had the most egg discounts, and Galleria the least. 
+
+
+```{r}
+#| label: fig-vendorsales
+#| fig-cap: Number of Discounts Provided By Each Vendor On Eggs Between March and November 2024
+#| echo: false
+#| warning: false
+#| message: false
+
+analysis_data |> 
+  ggplot(aes(x = vendor)) +
+  geom_bar() +
+  theme_classic() +
+  labs(x = "Vendor",
+       y = "Number of Sales")
+```
+
+
 Next, @fig-monthprices shows the average sale price of a dozen eggs across different months. It can be observed that price dips slightly during the summer, reaching its lowest in July, before increasing again. Differences throughout months are typically gradual and do not fluctuate very much. 
 
 
@@ -194,13 +213,11 @@ There are other food pricing related datasets available for use, such as Statist
 
 # Model
 
-The goal of our modelling strategy is twofold. Firstly,...
-
-Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
+The goal of our modeling is to understand how the predictor variables — month, vendor, presale price, and previous month's average sale price — affects the response variable of current price. For this paper, a multiple linear regression model will be utilized.
 
 ## Model set-up
 
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
+Define $y_i$ as the current price. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
 
 \begin{align} 
 y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\

@@ -11,7 +11,6 @@
 
 #### Workspace setup ####
 library(tidyverse)
-library(rstanarm)
 library(arrow)
 library(here)
 
@@ -23,35 +22,21 @@ analysis_data <- read_parquet(file = here("data/02-analysis_data/analysis_data.p
 ### Model data ####
 
 # Create models
-bayes_model1 <- 
-  stan_glm(
-    formula = current_price ~ month + vendor + old_price,
-    data = analysis_data,
-    family = gaussian(),
-    prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_aux = exponential(rate = 1, autoscale = TRUE),
-    seed = 520
-  )
+model1 <- 
+  lm(formula = current_price ~ month + vendor + old_price,
+    data = analysis_data)
 
-bayes_model2 <-
-  stan_glm(
-    formula = current_price ~ month + vendor + old_price + prev_month_avg,
-    data = analysis_data,
-    family = gaussian(),
-    prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_aux = exponential(rate = 1, autoscale = TRUE),
-    seed = 520
-  )
+model2 <- 
+  lm(formula = current_price ~ month + vendor + old_price*prev_month_avg,
+     data = analysis_data)
 
 #### Save models ####
 saveRDS(
-  bayes_model1,
-  file = "models/bayes_model1.rds"
+  model1,
+  file = "models/lm_model1.rds"
 )
 
 saveRDS(
-  bayes_model2,
-  file = "models/bayes_model2.rds"
+  model2,
+  file = "models/lm_model2.rds"
 )

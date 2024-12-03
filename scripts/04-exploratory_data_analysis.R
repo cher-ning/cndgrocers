@@ -79,12 +79,21 @@ test2_model <-
 
 summary(test2_model) # R squared = 0.8085, adj = 0.806
 
-
+####
 
 test4_model <- 
-  lm(
-    formula = current_price ~ month + vendor + old_price*prev_month_avg,
-    data = analysis_data
-  )
+  lm(formula = current_price ~ month + vendor + old_price*prev_month_avg,
+    data = analysis_data)
 
 summary(test4_model) # R squared = 0.8181, adj = 0.8155
+
+# check for equal error variance
+plot(test4_model, which = 1)
+
+# QQ plot, assess for normal distribution
+plot(test4_model, which = 2)
+
+plot(test4_model, which = 3)
+
+plot(test4_model, which = 5)
+

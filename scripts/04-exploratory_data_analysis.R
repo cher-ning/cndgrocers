@@ -43,17 +43,6 @@ test1_model <-
 pp_check(test1_model)
 summary(test1_model)
 
-## Model 2: linear regession model
-
-test2_model <- 
-  lm(
-    formula = current_price ~ month + vendor + old_price,
-    data = analysis_data
-  )
-
-summary(test2_model) # R squared = 0.8085, adj = 0.806
-
-
 # Model 3: Bayes, with account for prev month avg
 
 test3_model <-
@@ -78,3 +67,24 @@ modelsummary(
     "With Prev Month Avg" = test3_model
     )
 )
+
+
+## Model 2: linear regression model
+
+test2_model <- 
+  lm(
+    formula = current_price ~ month + vendor + old_price,
+    data = analysis_data
+  )
+
+summary(test2_model) # R squared = 0.8085, adj = 0.806
+
+
+
+test4_model <- 
+  lm(
+    formula = current_price ~ month + vendor + old_price*prev_month_avg,
+    data = analysis_data
+  )
+
+summary(test4_model) # R squared = 0.8181, adj = 0.8155

@@ -238,11 +238,15 @@ There are other food pricing related datasets available for use, such as Statist
 
 # Model {#sec-model}
 
+### Model Set-Up {#sec-model-setup}
+
 The goal of our modeling is to understand how the predictor variables—month, vendor, presale price, and previous month's average sale price—affects the response variable of current price. For this paper, a multiple linear regression model will be utilized.
 
 We define $Y_i$ as the current price, and initialize the full model as: 
 
-$Y_i = \beta_0 + \beta_1 month + \beta_2 vendor + \beta_3 old\_price * prev\_month\_avg$
+$$
+Y_i = \beta_0 + \beta_1 month + \beta_2 vendor + \beta_3 old\_price * prev\_month\_avg
+$$
 
 We create the model in R [@citeR], with help from package `tidyverse` [@tidyverse].
 

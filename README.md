@@ -8,7 +8,7 @@ Some of the code used to create this work was adapted from Alexander (2023).
 
 ## Data
 
-Please download the data as CSV files [here](https://jacobfilipp.com/hammer/)
+Please download the data as CSV files [here](https://jacobfilipp.com/hammer/), then unzip the files into `data/raw_data`.
 
 
 ## File Structure

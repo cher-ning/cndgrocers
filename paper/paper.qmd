@@ -183,7 +183,7 @@ analysis_data |>
        y = "Number of Sales")
 ```
 
-@fig-vendorsales shows the number of sales provided on egg dozens, showing a large variation between vendors. Metro notably had the most egg discounts, and Galleria the least. 
+@fig-monthsales shows the number of sales provided on egg dozens across the months, with the least number of sales occuring in July and most in November.
 
 
 \newpage
@@ -380,8 +380,6 @@ After combining the two tables, `raw` and `product`, by matching each entry's pr
 All unannounced price changes, including increases or decreases, have only a `current_price` value and empty `old_price` values, so all such entries were filtered out to narrow down analysis onto explicitly advertised sale events only. Then, the `current_price` and `old_price` columns were filtered to ensure all values were non-negative, as these entries are evidently the result of measurement error during data scraping. 
 
 
-\newpage
-
 ```{r}
 #| label: fig-datahead
 #| fig-cap: Sample of Analysis Data
@@ -403,7 +401,7 @@ kable(head(analysis_data, 5)) %>%
 
 After cleaning the dataset and adding in the derived variables, the final dataset of $1,278$ entries is what analysis will be conducted on. The first 5 rows from this analysis data is shown in @fig-datahead.
 
-## Observational Data {#sec-obs-data}
+## Observational Data and Sampling {#sec-obs-data}
 
 The dataset used is a compilation of price listings collected from grocery store websites directly, meaning that it is only observational data that was compiled without conducting of an experiment. This means that caution needs to be taken when making conclusions of causation from this data, because we can only be certain of correlation unless thorough tests are conducted. Our conclusions can possibly be affected by two common misconceptions, Simpson's and Berkson's paradoxes. 
 
@@ -414,6 +412,10 @@ Within this paper's context, both paradoxes are at risk of occurring because our
 In the same vein, the lack of significant price change around September could also be because of our sampling for egg items. Due to the school semester starting in September, intuition tells us that there are likely many sales going on for school supplies. Therefore, if we did not limit our search to egg dozens only, it is possible that September could show the lowest average prices instead of July, as shown in @fig-monthprices.
 
 This is one weakness inherent to using observational data, that there are many unknown or uncontrolled variables which could impact our analysis. Many errors can occur from making unsupported claims that are generalized beyond the specific subset where analysis was conducted, so care must be taken when interpreting model outcomes. 
+
+There are also potential weaknesses introduced by each level of sampling for this analysis. First, when Project Hammer scrapes the grocer websites, there may be items that were not tracked within this dataset. Especially before July, when information on a greater variety of products started being collected, there may be many missed entries of discounts on eggs. This introduces a potential sampling bias that may impact the accuracy of the model's results. Further, due to the selection of these 8 specific vendors in Canada, there may pricing patterns at other grocery chains that are unobservable from this dataset. For example, how would family-run grocery stores compare to these large chains? Are there similarities in pricing patterns across the months, or would they exhibit completely different behaviour? 
+
+\newpage
 
 ## Diagnostics {#sec-model-diagnostics}
 
@@ -461,6 +463,7 @@ plot(model, which = 3)
 ```
 
 @fig-standardizedfitted shows the standardized residuals vs fitted values graph for this model, which can be used to check the constant variance assumption of Linear Regression modelling. Our graph shows clustering, rather than an even spread around 0 that is expected, indicating a violation of this assumption. This means that a variance-stabilizing transformation on the response variable would be required to improve model accuracy further.
+
 
 \newpage
 

@@ -166,6 +166,25 @@ price_permonth |>
 
 Next, @fig-monthprices shows the average sale price of a dozen eggs across different months. It can be observed that price dips slightly during the summer, reaching its lowest in July, before increasing again. Differences throughout months are typically gradual and do not fluctuate very much. 
 
+\newpage
+
+```{r}
+#| label: fig-monthsales
+#| fig-cap: Number of Discounts Provided Each Month Between March and November 2024
+#| echo: false
+#| warning: false
+#| message: false
+
+analysis_data |> 
+  ggplot(aes(x = month)) +
+  geom_bar() +
+  theme_classic() +
+  labs(x = "Month",
+       y = "Number of Sales")
+```
+
+@fig-vendorsales shows the number of sales provided on egg dozens, showing a large variation between vendors. Metro notably had the most egg discounts, and Galleria the least. 
+
 
 \newpage
 
@@ -227,7 +246,7 @@ $Y_i = \beta_0 + \beta_1 month + \beta_2 vendor + \beta_3 old\_price * prev\_mon
 
 We create the model in R [@citeR], with help from package `tidyverse` [@tidyverse].
 
-### Model Weaknesses
+### Model Weaknesses {#sec-model-weakness}
 
 The first weakness of this model is that it assumes a linear relationship between the discounted price and the list of predictor variables. This oversimplication could be missing many aspects of their true relationship if it is nonlinear. As well, there could be real-world events such as economic changes or policy changes which could have significant impact on pricing, but this model would fail to capture these influences. 
 
@@ -329,13 +348,21 @@ The multiple linear regression model built in this paper investigates the influe
 
 More interestingly, as shown in @fig-monthprices in @sec-variables, July appeared to be the month where lowest discounted prices are offered. However, @fig-monthresults show that after isolating out the effects of other variables, it is actually the month of April that contributes most to discounting prices compared to other months. This discrepancy points to other confounding factors at play that caused the July average prices to be lowest. Further investigation with consideration for possible alternate causes would be needed to understand this pattern better. In contrast to the patterns observed in the simple data overview shown previously (@fig-monthprices), the model results now indicate that when considered individually, the months associated with the lowest to highest discounted egg prices would be April, September, May, November, June, July, October, August, in that order.
 
+When translating these findings to decisions in the real world, it is important to keep in mind that, as shown in @fig-vendorsales, there is a large variation in number of discounted items across the different vendors. For example, though Metro is not the vendor associated with the lowest discounted price, it is the vendor that offers the greatest number of available discounted eggs. Combined with its non-negligible impact on pricing reported by the model in @tbl-modelresults, Metro may be a better overall choice than T&T and No Frills, who have the leading impacts on pricing, but offer discounts at much smaller frequency. This indicates that T&T and No Frills have discounts rarely, but when they do, the sale price is very low. On the other hand, Metro has very frequent sales, but the amount discounted is not very high.
+
+The combination of frequency of sales with the discounted amount when considering how much benefit is actually provided to customers is a key consideration. A vendor that constantly advertises items to be "On Sale" may appear to be a good choice, but if the listed price is barely different from the original or average pricing, then this would be simply a marketing technique used by the vendor to disguise their regular price to appeal to customers without losing out on profit. This is a directly worthy of future investigation. 
+
+Frequency of sales occuring is also an important consideration because it impacts the accuracy of the model in predicting prices of eggs sold at that chain. That is, the observation that Galleria has very few sale events also has the effect that the model's accuracy when applied to Galleria listings will potentially be lower than when applied to Metro, which has a much higher number of discounts within this dataset.
+
 The variable `old_price`, representing an item's presale price, was found to have a negative coefficient at $-0.80$. This may be surprising at first because one would expect discounted price to increase as presale price increases. However, after taking the intercept base price into consideration, the interpretation for this coefficient makes much more sense. This result indicates that given every other variable is held constant, a greater presale price is correlated to a lower discounted price. This understanding makes much more intuitive sense, as sale events are typically calculated by percentage of the original price, meaning that a greater original price would lead to a greater decrease in price, thereby causing a greater decrease in discounted price in the end. 
 
 ## Weaknesses and Next Steps {#sec-nextsteps}
 
-Weaknesses and next steps should also be included.
-- combine with another dataset to get full year + more entries
-- maybe should try to specify the prev_month_avg down to also selection by vendor
+To further elaborate on the model weaknesses discussed in @sec-model-weakness, this overall study can greatly improved by combining other relevant datasets into the current analysis data. The set used to create the model has a relatively small sample size of only $1,278$ and combining with another source of data to obtain more entries would greatly increase the accuracy of the resulting model. Specifically, the first priority for improvement would be to obtain data points that span the full year so that our analysis is not restricted to only March to November. There could be key patterns of discounting in the winter months that are completely unobservable with the current dataset.
+
+As well, for next steps, it would also interesting to refine the measure of historical pricing further to distinguish by vendor in addition to month. With the current model, the measure of historical pricing is generalized to all vendors, which we also know from analysis has a significant effect on pricing. Therefore, if the historical pricing measure was even more specified, a more accurate model could be created.
+
+Another potential direction of improving the current model could be using a completely different model type. This model violates several linear regression assumptions, as shown in @sec-model-diagnostics. Though there are fixes that could be employed to achieve a better fit even with a linear model, it may be better to use a more complex model to begin with, such as a Bayesian model. 
 
 \newpage
 

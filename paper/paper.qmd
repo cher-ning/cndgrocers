@@ -73,7 +73,7 @@ For ease of analysis, these additional variables were derived:
 
 All entries with empty values in any of these key variables were dropped. Further details regarding the data cleaning process and a glimpse of the first 5 rows of the final cleaned dataset can be found in @sec-data-cleaning.
 
-Under the guidance of @tellingstories, the R programming language [@citeR] was used for analysis of this dataset. The package `tidyverse` [@tidyverse] was used to simulate data and test the simulated data before analysis. Packages `tidyverse` [@tidyverse] and `arrow` [@arrow] were utilized to clean the full raw dataset,  which were then also used alongside packages `testthat` [@testthat] and `here` [@here] to test the cleaned dataset. Lastly, packages `tidyverse` [@tidyverse], `rstanarm` [@rstanarm], `arrow` [@arrow], and `here` [@here] were used to build predictive models using the cleaned dataset. 
+Under the guidance of @tellingstories, the R programming language [@citeR] was used for analysis of this dataset. The package `tidyverse` [@tidyverse] was used to simulate data and test the simulated data before analysis. Packages `tidyverse` [@tidyverse] and `arrow` [@arrow] were utilized to clean the full raw dataset,  which were then also used alongside packages `testthat` [@testthat] and `here` [@here] to test the cleaned dataset. Lastly, packages `tidyverse` [@tidyverse], `rstanarm` [@rstanarm], `arrow` [@arrow], and `here` [@here] were used to build predictive models using the cleaned dataset. The package `ggplot` [@ggplot] was used for visualizing the dataset below.
 
 ## Measurement
 

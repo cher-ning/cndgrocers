@@ -1,11 +1,11 @@
 ---
-title: "Impacts of Month, Grocery Vendor, and Presale Prices on Discounted Egg Dozen Prices"
-subtitle: "Cheapest Discounted Prices Are Offered by T&T in April, by Multiple Linear Regression"
+title: "Impacts of Month, Grocery Vendor, Presale Prices, and Historical Pricing on Discounted Egg Dozen Prices"
+subtitle: "Cheapest Discounted Prices Are Offered by T&T or in April, by Multiple Linear Regression"
 author: Cher Ning-Li
-thanks: "Code and data are available at: (https://github.com/cher-ning/cndgrocers)[https://github.com/cher-ning/cndgrocers]."
+thanks: "Code and data are available at: [https://github.com/cher-ning/cndgrocers](https://github.com/cher-ning/cndgrocers)."
 date: today
 date-format: long
-abstract: "This study aims to understand the impacts of month, vendor, presale price, and average historical item pricing on the current discounted price of egg dozens using data of sales held between March and November 2024 by the 8 major grocery vendors of Canada. Using a multiple linear regression model, these factors were found to have significant interactions with the discounted price of eggs. These findings are key to understanding pricing patterns of different vendors across different months, helping consumers and retailers make better informed decisions."
+abstract: "This study aims to understand the impacts of month, vendor, presale price, and average historical item pricing on the current discounted price of egg dozens using data of sales held between March and November 2024 by the 8 major grocery vendors of Canada. Using a multiple linear regression model, these factors were found to have significant interactions with the discounted price of eggs, with T&T and April observing the lowest prices within each of their own categories. These findings are key to understanding pricing patterns of different vendors across different months, helping consumers and retailers make better informed decisions."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -41,7 +41,7 @@ In Toronto, a city that has an absurdly high cost of living at $1,492.10 per sin
 
 In addition, egg production is also an important industry in Canada, with 2021's production alone totaling up to a value of $1.8 billion [@eggstats]. The pay that egg farmers receive also depends on the value of eggs on the market, with British Columbian producers in 2021 receiving the highest price of \$2.41 per dozen on average [@eggstats].
 
-Evidently, the price of eggs has crucial impact on the lives of a huge number of people, whether it be all the consumers who are purchasing eggs regularly, or the farmers who make their living by selling this product. Between these two parties is the vendors, who determine the price at which these crucial food items are sold to customers for. Therefore, it would be beneficial to understand the underlying factors that determine egg pricing at various vendors.
+Evidently, the price of eggs has crucial impact on the lives of a huge number of people, whether it be all the consumers who are purchasing eggs regularly, or the farmers who make their living by selling this product. Between these two parties is the vendors, who determine the price at which these staple food items are sold to customers for. Therefore, it would be beneficial to understand the underlying factors that determine egg pricing at various vendors.
 
 The estimand that is targetted within this paper's analysis is the price of a dozen eggs across the 8 top Canadian grocers: Voila, T&T, Loblaws, No Frills, Metro, Galleria, Walmart Canada, and Save-On-Foods. In addition to vendor, the other variables that will also be taken into consideration are each item's presale price, month of the sale, and average historical discount pricing of egg dozens, as measured by the average discounted price of eggs in the month prior to the current sale.
 
@@ -79,7 +79,7 @@ Under the guidance of @tellingstories, the R programming language [@citeR] was u
 
 The observations in the dataset are scraped from the grocer's official website's interface, which means it only contains the information that is publically listed and available. The recorded prices for each item are the listed price for the "in store pick up" option, with the target pickup neighbourhood being a neighbourhood in Toronto. Certain values and listings may be missed, since the internal APIs that power the grocer's websites are not accessed and specific extracts may error for certain vendors on particular days for unforeseeable reasons. Starting from July 11, the targeted variety of grocery items for data collection was greatly increased, meaning that there may be products which are missing pricing information before then.
 
-## Variables of Interest
+## Variables of Interest {#sec-variables}
 
 The outcome variable that we are interested in understanding is the `current_price`, representing the sale price of a dozen eggs. The predictor variables are `month`, `vendor`, `old_price`, and `prev_month_avg`. 
 
@@ -102,6 +102,8 @@ analysis_data |>
 @fig-vendorprices shows a boxplot of the sale pricing of a dozen eggs across the 8 vendors. From this graph, we can observe that T&T has the lowest prices overall and Save On Foods the highest. There are also differences in the range of prices offered, with T&T and Metro having much wider price ranges compared to Galleria and Save On Foods, which have highly consistent sale pricing. 
 
 
+\newpage
+
 ```{r}
 #| label: fig-vendorsales
 #| fig-cap: Number of Discounts Provided By Each Vendor On Eggs Between March and November 2024
@@ -119,6 +121,8 @@ analysis_data |>
 
 @fig-vendorsales shows the number of sales provided on egg dozens, showing a large variation between vendors. Metro notably had the most egg discounts, and Galleria the least. 
 
+
+\newpage
 
 ```{r}
 #| label: fig-monthprices
@@ -162,6 +166,9 @@ price_permonth |>
 
 Next, @fig-monthprices shows the average sale price of a dozen eggs across different months. It can be observed that price dips slightly during the summer, reaching its lowest in July, before increasing again. Differences throughout months are typically gradual and do not fluctuate very much. 
 
+
+\newpage
+
 ```{r}
 #| label: fig-oldvsnew
 #| fig-cap: Presale and Sale Prices of a Dozen Eggs
@@ -181,6 +188,9 @@ analysis_data |>
 ```
 
 @fig-oldvsnew shows the positive and relatively linear relationship between the original presale price and discounted price of a dozen eggs across all 8 vendors. The dotted line has a slope of 1 and indicates how prices would look if discounted prices are equal to presale prices. All data points are on or below the dotted line, indicating that discounted prices are always equal to or less than the original presale price. The blue line, representing the line of best fit, has a positive but smaller slope than the dotted line, indicating that sale prices increase at a slower rate than presale prices. In other words, the greater an item's presale price, the greater the price difference would be. This confirms our intuitions about how sale events occur in the real world, as sales are typically calculated as a percentage of the original price. 
+
+
+\newpage
 
 ```{r}
 #| label: fig-prevmonth
@@ -254,30 +264,24 @@ summ(model)
 
 The results of this model, summarized in @tbl-modelresults, indicates that discounted price is a complex value that is impacted by a variety of factors. Because `vendor` and `month` are both categorical variables, default baseline values for them were chosen to be April and Galleria, whose effects on price would be described by the intercept value. Note that within this model, 125 entries were removed due to missing data—these would be the March entries, since they have empty values under the `prev_month_avg` variable.
 
-For the continuous variables `old_price`, we observe a negative coefficient of $-0.80$, which may be surprising at first because one would expect discounted price to increase as presale price increases. However, after taking the intercept base price into consideration, the interpretation for this coefficient makes much more sense. This result indicates that given a set base price, a greater presale price is correlated to a lower discounted price.
+For the continuous variable `old_price`, we observe a negative coefficient of $-0.80$, indicating that when all other variables are held constant, a greater presale price is correlated with a decrease in current discounted price. Intuitions behind why this value may be negative will be discussed in @sec-discussion.
 
 The interaction term of `old_price` with `prev_month_avg` has a slight positive coefficient, meaning that when either of these characteristics increase, current discounted price is projected to increase as well. 
 
-The $R^2$ and Adjusted $R^2$ values of 0.82 indicate that $82%$ of the variability in the discounted price within this dataset can be explained by the current model. 
+The $R^2$ and Adjusted $R^2$ values of 0.82 indicate that 82% of the variability in the discounted price within this dataset can be explained by the current model. 
 
 
+\newpage
 
 ```{r}
 #| echo: false
 #| eval: true
-#| label: fig-vendorresults
-#| fig-cap: "Vendor Category Coefficients"
+#| label: fig-vendors-result
+#| fig-cap: "Coefficients Representing Each of the 8 Vendors' Impact on Discounted Price"
 #| warning: false
 
 coeff <- c(0.02, 0, -0.51, -0.54, -0.72, -0.97, -1.78, -1.87)
 vendors <- c("Save On Foods", "Galleria", "Walmart", "Voila", "Loblaws", "Metro", "No Frills", "T&T")
-
-price_permonth |> 
-  ggplot(mapping = aes(x = month, y = avg_price)) +
-  geom_col() + 
-  theme_classic() +
-  labs(x = "Month",
-       y = "Average Sale Price of a Dozen Eggs")
 
 vendor_results <- data.frame(Vendors = vendors, Coefficients = coeff)
 vendor_results |>
@@ -289,14 +293,16 @@ vendor_results |>
        y = "Coefficients by Multiple Linear Regression")
 ```
 
-First, we compare the vendor categories in more detail in @fig-vendorresults. `vendorTandT` has the lowest coefficient value at $-1.87$, meaning that the average discounted price at T&T is expected to be the lowest, compared to other vendors. `vendorSaveOnFoods` has the highest coefficient at $0.02$, is it also the only positive coefficient for the vendors, meaning that average discounted prices at Save On Foods are expected to be the highest, and the only vendor which has higher average prices than the baseline category of Galleria.
+First, we compare the vendor categories in more detail in @fig-vendors-result. Variable `vendorTandT` has the lowest coefficient value at $-1.87$, meaning that the average discounted price at T&T is expected to be the lowest, compared to other vendors. `vendorSaveOnFoods` has the highest coefficient at $0.02$, is it also the only positive coefficient for the vendors, meaning that average discounted prices at Save On Foods are expected to be the highest, and the only vendor which has higher average prices than the baseline category of Galleria.
 
+
+\newpage
 
 ```{r}
 #| echo: false
 #| eval: true
 #| label: fig-monthresults
-#| fig-cap: "Month Category Coefficients"
+#| fig-cap: "Coefficients Representing Each Month's Impact on Discounted Price From April to November"
 #| warning: false
 
 coeff <- c(0, 0.36, 0.83, 1.03, 1.72, 0.31, 1.13, 0.58)
@@ -317,9 +323,13 @@ Similarly, we can compare the coefficients within the `month` category, as shown
 
 # Discussion {#sec-discussion}
 
-## Factors Influencing Egg Dozen Prices {#sec-influencing-factors}
+## Main Findings and Implications {#sec-influencing-factors}
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+The multiple linear regression model built in this paper investigates the influences of month, vendor, presale pricing, and average discounted price of the previous month on current egg item discounts. This model is helpful in isolating out the effects of each variable on price. In the vendor category, the effects of each vendor translates quite directly into the average listed discount price, with T&T and No Frills having the lowest coefficients as well as average prices (@fig-vendorprices; @fig-vendors-result). With these results, it can concluded that when considered alone, the vendors where customers can go to find the lowest to highest discounted egg prices would be T&T, No Frills, Metro, Loblaws, Voila, Walmart, Galleria, and Save On Foods, in that order.
+
+More interestingly, as shown in @fig-monthprices in @sec-variables, July appeared to be the month where lowest discounted prices are offered. However, @fig-monthresults show that after isolating out the effects of other variables, it is actually the month of April that contributes most to discounting prices compared to other months. This discrepancy points to other confounding factors at play that caused the July average prices to be lowest. Further investigation with consideration for possible alternate causes would be needed to understand this pattern better. In contrast to the patterns observed in the simple data overview shown previously (@fig-monthprices), the model results now indicate that when considered individually, the months associated with the lowest to highest discounted egg prices would be April, September, May, November, June, July, October, August, in that order.
+
+The variable `old_price`, representing an item's presale price, was found to have a negative coefficient at $-0.80$. This may be surprising at first because one would expect discounted price to increase as presale price increases. However, after taking the intercept base price into consideration, the interpretation for this coefficient makes much more sense. This result indicates that given every other variable is held constant, a greater presale price is correlated to a lower discounted price. This understanding makes much more intuitive sense, as sale events are typically calculated by percentage of the original price, meaning that a greater original price would lead to a greater decrease in price, thereby causing a greater decrease in discounted price in the end. 
 
 ## Weaknesses and Next Steps {#sec-nextsteps}
 
@@ -342,7 +352,8 @@ After combining the two tables, `raw` and `product`, by matching each entry's pr
 
 All unannounced price changes, including increases or decreases, have only a `current_price` value and empty `old_price` values, so all such entries were filtered out to narrow down analysis onto explicitly advertised sale events only. Then, the `current_price` and `old_price` columns were filtered to ensure all values were non-negative, as these entries are evidently the result of measurement error during data scraping. 
 
-After cleaning the dataset and adding in the derived variables, the final dataset of $1,278$ entries is what analysis will be conducted on. The first 5 rows from this analysis data is shown in @fig-datahead.
+
+\newpage
 
 ```{r}
 #| label: fig-datahead
@@ -363,6 +374,7 @@ kable(head(analysis_data, 5)) %>%
 
 ```
 
+After cleaning the dataset and adding in the derived variables, the final dataset of $1,278$ entries is what analysis will be conducted on. The first 5 rows from this analysis data is shown in @fig-datahead.
 
 ## Observational Data {#sec-obs-data}
 
@@ -378,20 +390,50 @@ This is one weakness inherent to using observational data, that there are many u
 
 ## Diagnostics {#sec-model-diagnostics}
 
+```{r}
+#| echo: false
+#| eval: true
+#| message: false
+#| warning: false
+#| label: fig-resid-model
+#| fig-cap: "Residual vs Fitted Values Plot for Model"
+
+plot(model, which = 1)
+```
+
+@fig-resid-model shows the residuals vs fitted values for this paper's model. This plot can be used to check the linearity and independent error assumptions of Multiple Linear Regression modeling. Our result does not fully resemble a null plot, as expected under these assumptions, indicating that some non-linear transformations on the predictor variables, response variable, or some combination of both can be used to improve the fit of this model. 
+
+
+\newpage
 
 ```{r}
 #| echo: false
 #| eval: true
 #| message: false
 #| warning: false
-#| label: fig-stanareyouokay
-#| fig-cap: "Checking the convergence of the MCMC algorithm"
-#| fig-subcap: ["Trace plot", "Rhat plot"]
-#| layout-ncol: 2
+#| label: fig-qqplot
+#| fig-cap: "QQ-Normal Plot for Model"
 
+plot(model, which = 2)
 ```
 
+@fig-qqplot shows the QQ plot for the current model, which checks for the normal error assumption of Linear Regression modelling. As observed, the points deviate heavily from the straight line on the lower end, indicating that errors are not normally distributed.
 
+
+\newpage
+
+```{r}
+#| echo: false
+#| eval: true
+#| message: false
+#| warning: false
+#| label: fig-standardizedfitted
+#| fig-cap: "Standardized Residuals vs Fitted Values Plot for Model"
+
+plot(model, which = 3)
+```
+
+@fig-standardizedfitted shows the standardized residuals vs fitted values graph for this model, which can be used to check the constant variance assumption of Linear Regression modelling. Our graph shows clustering, rather than an even spread around 0 that is expected, indicating a violation of this assumption. This means that a variance-stabilizing transformation on the response variable would be required to improve model accuracy further.
 
 \newpage
 

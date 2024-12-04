@@ -1,11 +1,11 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "Impacts of Month, Grocery Vendor, and Presale Prices on Discounted Egg Dozen Prices"
+subtitle: "Cheapest Discounted Prices Are Offered by T&T in April, by Multiple Linear Regression"
 author: Cher Ning-Li
 thanks: "Code and data are available at: (https://github.com/cher-ning/cndgrocers)[https://github.com/cher-ning/cndgrocers]."
 date: today
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "This study aims to understand the impacts of month, vendor, presale price, and average historical item pricing on the current discounted price of egg dozens using data of sales held between March and November 2024 by the 8 major grocery vendors of Canada. Using a multiple linear regression model, these factors were found to have significant interactions with the discounted price of eggs. These findings are key to understanding pricing patterns of different vendors across different months, helping consumers and retailers make better informed decisions."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -37,24 +37,24 @@ model <- readRDS(file = here("models/lm_model1.rds"))
 
 # Introduction
 
-#TODO: Overview paragraph
+In Toronto, a city that has an absurdly high cost of living at $1,492.10 per single person even without rent included, any area where unnecessary spending can be avoided would be greatly advantageous to know [@numbeo]. For those who are trying to save as much as they can, grocery shopping and homecooking is often a strategy employed to avoid the additional expenses of eating out. Even for people don't cook often, grocery shopping is still a monthly expense that is nearly unavoidable. Within these items, eggs are a staple grocery item that is consumed often by a wide demographic of people, with the average Canadian consuming up to 242 eggs per year [@eggfacts]. It is a cheaper source of protein than meats and a common ingredient in many dishes, making it one of the most frequently purchased grocery items.
 
-The estimand that is targetted within this paper's analysis is the price of a dozen eggs across the 8 top Canadian grocers. 
+In addition, egg production is also an important industry in Canada, with 2021's production alone totaling up to a value of $1.8 billion [@eggstats]. The pay that egg farmers receive also depends on the value of eggs on the market, with British Columbian producers in 2021 receiving the highest price of \$2.41 per dozen on average [@eggstats].
 
-#TODO: Results paragraph
+Evidently, the price of eggs has crucial impact on the lives of a huge number of people, whether it be all the consumers who are purchasing eggs regularly, or the farmers who make their living by selling this product. Between these two parties is the vendors, who determine the price at which these crucial food items are sold to customers for. Therefore, it would be beneficial to understand the underlying factors that determine egg pricing at various vendors.
 
-#TODO: Why it matters paragraph
+The estimand that is targetted within this paper's analysis is the price of a dozen eggs across the 8 top Canadian grocers: Voila, T&T, Loblaws, No Frills, Metro, Galleria, Walmart Canada, and Save-On-Foods. In addition to vendor, the other variables that will also be taken into consideration are each item's presale price, month of the sale, and average historical discount pricing of egg dozens, as measured by the average discounted price of eggs in the month prior to the current sale.
 
-#TODO: Telegraphing paragraph: The remainder of this paper is structured as follows. @sec-data....
+Through building a Multiple Linear Regression Model, this paper finds that all four variables had non-negligable influences on the discounted price of eggs, with a key interaction term between historical pricing and presale pricing playing a role as well. Notably, T&T and April offering the most discounted egg prices comparative to all others in their own category. As well, presale price was found to have a negative relationship with discounted price, indicating that the most expensive eggs will be discounted more, when all other variables are held constant. 
 
-
-
+The remainder of this paper is structured as follows. @sec-data will introduce the dataset used for the analysis and the relevant variables of interest. @sec-model covers how the model was set up and its weaknesses. @sec-results displays the findings of the model, and 
+@sec-discussion elaborates further on the findings to add context as well as comment on the limitations of the current model. Within the Appendix, @sec-data-cleaning details how the full dataset was cleaned before modeling, @sec-obs-data comments on the implications of using a dataset of observational data for analysis, and @sec-model-diagnostics contains detailed diagnostics for the model.
 
 # Data {#sec-data}
 
 ## Overview
 
-The dataset used for this paper's analysis is titled "Canadian Grocery Price Data" and was obtained from Project Hammer [@projecthammer], which compiles grocery store price listings across the 8 major Canadian Grocers — Voila, T&T, Loblaws, No Frills, Metro, Galleria, Walmart, and Save-On-Foods. The dataset contains data starting from February 28, 2024 and is updated regularly with the addition of new entries. Only the entries up until November 25, 2024 are considered within this paper.
+The dataset used for this paper's analysis is titled "Canadian Grocery Price Data" and was obtained from Project Hammer [@projecthammer], which compiles grocery store price listings across the 8 major Canadian Grocers—Voila, T&T, Loblaws, No Frills, Metro, Galleria, Walmart, and Save-On-Foods. The dataset contains data starting from February 28, 2024 and is updated regularly with the addition of new entries. Only the entries up until November 25, 2024 are considered within this paper.
 
 The dataset was downloaded as two separate csv files titled `hammer-4-product.csv` and `hammer-4-raw.csv`. The `product` table includes information about specific products that are available across the different grocers, with unique product ID numbers to identify each listing at each grocer. The `raw` table includes the price and more time-specific information regarding each product's listing. The two tables were joined by matching the product IDs to create the full dataset, a comprehensive table where each entry holds all the necessary product and listing information. 
 
@@ -83,8 +83,6 @@ The observations in the dataset are scraped from the grocer's official website's
 
 The outcome variable that we are interested in understanding is the `current_price`, representing the sale price of a dozen eggs. The predictor variables are `month`, `vendor`, `old_price`, and `prev_month_avg`. 
 
-@fig-vendorprices shows a boxplot of the sale pricing of a dozen eggs across the 8 vendors. From this graph, we can observe that T&T has the lowest prices overall and Save On Foods the highest. There are also differences in the range of prices offered, with T&T and Metro having much wider price ranges compared to Galleria and Save On Foods, which have highly consistent sale pricing. 
-
 ```{r}
 #| label: fig-vendorprices
 #| fig-cap: Average Sale Price of a Dozen Eggs Across Vendors
@@ -101,7 +99,7 @@ analysis_data |>
        y = "Sale Price of a Dozen Eggs")
 ```
 
-@fig-vendorsales shows the number of sales provided on egg dozens, showing a large variation between vendors. Metro notably had the most egg discounts, and Galleria the least. 
+@fig-vendorprices shows a boxplot of the sale pricing of a dozen eggs across the 8 vendors. From this graph, we can observe that T&T has the lowest prices overall and Save On Foods the highest. There are also differences in the range of prices offered, with T&T and Metro having much wider price ranges compared to Galleria and Save On Foods, which have highly consistent sale pricing. 
 
 
 ```{r}
@@ -119,8 +117,7 @@ analysis_data |>
        y = "Number of Sales")
 ```
 
-
-Next, @fig-monthprices shows the average sale price of a dozen eggs across different months. It can be observed that price dips slightly during the summer, reaching its lowest in July, before increasing again. Differences throughout months are typically gradual and do not fluctuate very much. 
+@fig-vendorsales shows the number of sales provided on egg dozens, showing a large variation between vendors. Metro notably had the most egg discounts, and Galleria the least. 
 
 
 ```{r}
@@ -163,7 +160,7 @@ price_permonth |>
        y = "Average Sale Price of a Dozen Eggs")
 ```
 
-@fig-oldvsnew shows the positive and relatively linear relationship between the original presale price and discounted price of a dozen eggs across all 8 vendors. The dotted line has a slope of 1 and indicates how prices would look if discounted prices are equal to presale prices. All data points are on or below the dotted line, indicating that discounted prices are always equal to or less than the original presale price. The blue line, representing the line of best fit, has a positive but smaller slope than the dotted line, indicating that sale prices increase at a slower rate than presale prices. In other words, the greater an item's presale price, the greater the price difference would be. This confirms our intuitions about how sale events occur in the real world, as sales are typically calculated as a percentage of the original price. 
+Next, @fig-monthprices shows the average sale price of a dozen eggs across different months. It can be observed that price dips slightly during the summer, reaching its lowest in July, before increasing again. Differences throughout months are typically gradual and do not fluctuate very much. 
 
 ```{r}
 #| label: fig-oldvsnew
@@ -183,9 +180,7 @@ analysis_data |>
 
 ```
 
-
-@fig-prevmonth shows the relationship between the current sale price of a dozen eggs compared to the previous month's average price. Similar to @fig-oldvsnew, the dotted line has a slope of 1 and indicates variables growing at an equal rate whereas the blue line represents the line of best fit. Here, in contrast to @fig-oldvsnew, the relationship appears much weaker with a greater scatter and deviation of values. The line of best fit has a positive slope that is less than 1, indicating that current sale prices increase when previous month's prices do, but at a slower rate. That is, a higher price average in the previous month is correlated with higher prices in the current month, but not to a high degree.
-
+@fig-oldvsnew shows the positive and relatively linear relationship between the original presale price and discounted price of a dozen eggs across all 8 vendors. The dotted line has a slope of 1 and indicates how prices would look if discounted prices are equal to presale prices. All data points are on or below the dotted line, indicating that discounted prices are always equal to or less than the original presale price. The blue line, representing the line of best fit, has a positive but smaller slope than the dotted line, indicating that sale prices increase at a slower rate than presale prices. In other words, the greater an item's presale price, the greater the price difference would be. This confirms our intuitions about how sale events occur in the real world, as sales are typically calculated as a percentage of the original price. 
 
 ```{r}
 #| label: fig-prevmonth
@@ -206,16 +201,19 @@ analysis_data |>
 
 ```
 
+@fig-prevmonth shows the relationship between the current sale price of a dozen eggs compared to the previous month's average price. Similar to @fig-oldvsnew, the dotted line has a slope of 1 and indicates variables growing at an equal rate whereas the blue line represents the line of best fit. Here, in contrast to @fig-oldvsnew, the relationship appears much weaker with a greater scatter and deviation of values. The line of best fit has a positive slope that is less than 1, indicating that current sale prices increase when previous month's prices do, but at a slower rate. That is, a higher price average in the previous month is correlated with higher prices in the current month, but not to a high degree.
 
 ## Other Datasets
 
 There are other food pricing related datasets available for use, such as Statistics Canada's "Average Retail Food Prices" [@otherdataset]. Though it does also contain average price information for a dozen eggs, this dataset was not utilized within this paper's analysis in the end because it only contains monthly averages that are also not divided by vendor. As well, the averages in this dataset are generalized across the entire provinces, in contrast to Project Hammer's dataset which is centred on Toronto prices [@projecthammer]. This could introduce inaccuracies into our model, as the wider geographical range may be failing to capture Toronto's comparatively higher cost of living, compared to other Ontario regions. 
 
-# Model
+# Model {#sec-model}
 
-The goal of our modeling is to understand how the predictor variables — month, vendor, presale price, and previous month's average sale price — affects the response variable of current price. For this paper, a multiple linear regression model will be utilized.
+The goal of our modeling is to understand how the predictor variables—month, vendor, presale price, and previous month's average sale price—affects the response variable of current price. For this paper, a multiple linear regression model will be utilized.
 
-We define $Y_i$ as the current price, and initialize the full model as: $Y_i = \beta_0 + \beta_1 month + \beta_2 vendor + \beta_3 old\_price * prev\_month\_avg$
+We define $Y_i$ as the current price, and initialize the full model as: 
+
+$Y_i = \beta_0 + \beta_1 month + \beta_2 vendor + \beta_3 old\_price * prev\_month\_avg$
 
 We create the model in R [@citeR], with help from package `tidyverse` [@tidyverse].
 
@@ -233,14 +231,9 @@ Lastly, this dataset is only observational data, and therefore it is insufficien
 
 Diagnostics that show the model's weaknesses can be found in @sec-model-diagnostics. 
 
-# Results
+\newpage
 
-The results of this model, summarized in @tbl-modelresults, indicates that discounted price is a complex value that is impacted by a variety of factors. Because `vendor` and `month` are both categorical variables, default baseline values for them were chosen to be April and Galleria, whose effects on price would be described by the intercept value. Note that within this model, 125 entries were removed due to missing data — these would be the March entries, since they have empty values under the `prev_month_avg` variable.
-
-For the continuous variables `old_price`, we observe a negative coefficient of $-0.80$, which may be surprising at first because one would expect discounted price to increase as presale price increases. However, after taking the intercept base price into consideration, the interpretation for this coefficient makes much more sense. This result indicates that given a set base price, a greater presale price is correlated to a lower discounted price.
-
-The interaction term of `old_price` with `prev_month_avg` has a slight positive coefficient, meaning that when either of these characteristics increase, current discounted price is projected to increase as well. 
-
+# Results {#sec-results}
 
 ```{r}
 #| echo: false
@@ -259,46 +252,70 @@ The interaction term of `old_price` with `prev_month_avg` has a slight positive 
 summ(model)
 ```
 
-First, we compare the vendor categories in more detail in @tbl-vendorresults. `vendorTandT` has the lowest coefficient value at $-1.87$, meaning that the average discounted price at T&T is expected to be the lowest, compared to other vendors. `vendorSaveOnFoods` has the highest coefficient at $0.02$, is it also the only positive coefficient for the vendors, meaning that average discounted prices at Save On Foods are expected to be the highest, and the only vendor which has higher average prices than the baseline category of Galleria.
+The results of this model, summarized in @tbl-modelresults, indicates that discounted price is a complex value that is impacted by a variety of factors. Because `vendor` and `month` are both categorical variables, default baseline values for them were chosen to be April and Galleria, whose effects on price would be described by the intercept value. Note that within this model, 125 entries were removed due to missing data—these would be the March entries, since they have empty values under the `prev_month_avg` variable.
+
+For the continuous variables `old_price`, we observe a negative coefficient of $-0.80$, which may be surprising at first because one would expect discounted price to increase as presale price increases. However, after taking the intercept base price into consideration, the interpretation for this coefficient makes much more sense. This result indicates that given a set base price, a greater presale price is correlated to a lower discounted price.
+
+The interaction term of `old_price` with `prev_month_avg` has a slight positive coefficient, meaning that when either of these characteristics increase, current discounted price is projected to increase as well. 
+
+The $R^2$ and Adjusted $R^2$ values of 0.82 indicate that $82%$ of the variability in the discounted price within this dataset can be explained by the current model. 
+
+
 
 ```{r}
 #| echo: false
 #| eval: true
-#| label: tbl-vendorresults
-#| tbl-cap: "Vendor Category Coefficients"
+#| label: fig-vendorresults
+#| fig-cap: "Vendor Category Coefficients"
 #| warning: false
 
 coeff <- c(0.02, 0, -0.51, -0.54, -0.72, -0.97, -1.78, -1.87)
 vendors <- c("Save On Foods", "Galleria", "Walmart", "Voila", "Loblaws", "Metro", "No Frills", "T&T")
+
+price_permonth |> 
+  ggplot(mapping = aes(x = month, y = avg_price)) +
+  geom_col() + 
+  theme_classic() +
+  labs(x = "Month",
+       y = "Average Sale Price of a Dozen Eggs")
+
 vendor_results <- data.frame(Vendors = vendors, Coefficients = coeff)
-kable(vendor_results) %>%
-  kable_styling(
-    font_size = 10,
-    full_width = FALSE,
-    position = "center")
+vendor_results |>
+  ggplot(mapping = aes(x = Vendors, y = Coefficients)) +
+  geom_col() +
+  geom_text(aes(label = Coefficients, vjust = -0.5)) + 
+  theme_classic() +
+  labs(x = "Vendors", 
+       y = "Coefficients by Multiple Linear Regression")
 ```
 
-Similarly, we can compare the coefficients within the `month` category, as shown in @tbl-monthresults. Interestingly, in contrast to the overview shown in @fig-monthprices, July is no longer the month with the lowest prices. Instead, the baseline level of April is associated with the lowest prices, since all other months observe positive coefficients. This discrepancy will be discussed further in @sec-influencing-factors. The month with the highest prices by this model is August, with a coefficient of $1.72$.
+First, we compare the vendor categories in more detail in @fig-vendorresults. `vendorTandT` has the lowest coefficient value at $-1.87$, meaning that the average discounted price at T&T is expected to be the lowest, compared to other vendors. `vendorSaveOnFoods` has the highest coefficient at $0.02$, is it also the only positive coefficient for the vendors, meaning that average discounted prices at Save On Foods are expected to be the highest, and the only vendor which has higher average prices than the baseline category of Galleria.
+
 
 ```{r}
 #| echo: false
 #| eval: true
-#| label: tbl-monthresults
-#| tbl-cap: "Month Category Coefficients"
+#| label: fig-monthresults
+#| fig-cap: "Month Category Coefficients"
 #| warning: false
 
 coeff <- c(0, 0.36, 0.83, 1.03, 1.72, 0.31, 1.13, 0.58)
 months <- c("April", "May", "June", "July", "August", "September", "October", "November")
 month_results <- data.frame(Months = months, Coefficients = coeff)
 
-kable(month_results) %>%
-  kable_styling(
-    font_size = 10,
-    full_width = FALSE,
-    position = "center")
+
+month_results |>
+  ggplot(mapping = aes(x = Months, y = Coefficients)) +
+  geom_col() +
+  geom_text(aes(label = Coefficients, vjust = -0.5)) + 
+  theme_classic() +
+  labs(x = "Months", 
+       y = "Coefficients by Multiple Linear Regression")
 ```
 
-# Discussion
+Similarly, we can compare the coefficients within the `month` category, as shown in @fig-monthresults. Interestingly, in contrast to the overview shown in @fig-monthprices, July is no longer the month with the lowest prices. Instead, the baseline level of April is associated with the lowest prices, since all other months observe positive coefficients. This discrepancy will be discussed further in @sec-influencing-factors. The month with the highest prices by this model is August, with a coefficient of $1.72$.
+
+# Discussion {#sec-discussion}
 
 ## Factors Influencing Egg Dozen Prices {#sec-influencing-factors}
 
@@ -346,22 +363,6 @@ kable(head(analysis_data, 5)) %>%
 
 ```
 
-
-# Model details {#sec-model-details}
-
-
-
-```{r}
-#| eval: true
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-ppcheckandposteriorvsprior
-#| layout-ncol: 2
-#| fig-cap: "Examining how the model fits, and is affected by, the data"
-#| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
-
-```
 
 ## Observational Data {#sec-obs-data}
 

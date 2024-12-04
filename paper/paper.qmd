@@ -25,6 +25,7 @@ library(modelsummary)
 library(rstanarm)
 library(knitr)
 library(kableExtra)
+library(jtools)
 
 # Read in analysis_data
 analysis_data <- read_parquet(file = here("data/02-analysis_data/analysis_data.parquet"), show_col_types = FALSE)
@@ -234,38 +235,79 @@ Diagnostics that show the model's weaknesses can be found in @sec-model-diagnost
 
 # Results
 
+The results of this model, summarized in @tbl-modelresults, indicates that discounted price is a complex value that is impacted by a variety of factors. Because `vendor` and `month` are both categorical variables, default baseline values for them were chosen to be April and Galleria, whose effects on price would be described by the intercept value. Note that within this model, 125 entries were removed due to missing data — these would be the March entries, since they have empty values under the `prev_month_avg` variable.
+
+For the continuous variables `old_price`, we observe a negative coefficient of $-0.80$, which may be surprising at first because one would expect discounted price to increase as presale price increases. However, after taking the intercept base price into consideration, the interpretation for this coefficient makes much more sense. This result indicates that given a set base price, a greater presale price is correlated to a lower discounted price.
+
+The interaction term of `old_price` with `prev_month_avg` has a slight positive coefficient, meaning that when either of these characteristics increase, current discounted price is projected to increase as well. 
+
 
 ```{r}
 #| echo: false
 #| eval: true
 #| label: tbl-modelresults
-#| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
+#| tbl-cap: "Multiple Linear Regression Model of Discounted Egg Prices Based on Vendor, Month, Presale Price, and Previous Month's Average Discounted Price"
 #| warning: false
 
-modelsummary::modelsummary(
-  list(
-    "Model Results" = model
-  ),
-  fmt = 2
-)
+#modelsummary(
+#  list(
+#    "Model Results" = model
+#  ),
+#  fmt = 2
+#)
+
+summ(model)
 ```
 
+First, we compare the vendor categories in more detail in @tbl-vendorresults. `vendorTandT` has the lowest coefficient value at $-1.87$, meaning that the average discounted price at T&T is expected to be the lowest, compared to other vendors. `vendorSaveOnFoods` has the highest coefficient at $0.02$, is it also the only positive coefficient for the vendors, meaning that average discounted prices at Save On Foods are expected to be the highest, and the only vendor which has higher average prices than the baseline category of Galleria.
+
+```{r}
+#| echo: false
+#| eval: true
+#| label: tbl-vendorresults
+#| tbl-cap: "Vendor Category Coefficients"
+#| warning: false
+
+coeff <- c(0.02, 0, -0.51, -0.54, -0.72, -0.97, -1.78, -1.87)
+vendors <- c("Save On Foods", "Galleria", "Walmart", "Voila", "Loblaws", "Metro", "No Frills", "T&T")
+vendor_results <- data.frame(Vendors = vendors, Coefficients = coeff)
+kable(vendor_results) %>%
+  kable_styling(
+    font_size = 10,
+    full_width = FALSE,
+    position = "center")
+```
+
+Similarly, we can compare the coefficients within the `month` category, as shown in @tbl-monthresults. Interestingly, in contrast to the overview shown in @fig-monthprices, July is no longer the month with the lowest prices. Instead, the baseline level of April is associated with the lowest prices, since all other months observe positive coefficients. This discrepancy will be discussed further in @sec-influencing-factors. The month with the highest prices by this model is August, with a coefficient of $1.72$.
+
+```{r}
+#| echo: false
+#| eval: true
+#| label: tbl-monthresults
+#| tbl-cap: "Month Category Coefficients"
+#| warning: false
+
+coeff <- c(0, 0.36, 0.83, 1.03, 1.72, 0.31, 1.13, 0.58)
+months <- c("April", "May", "June", "July", "August", "September", "October", "November")
+month_results <- data.frame(Months = months, Coefficients = coeff)
+
+kable(month_results) %>%
+  kable_styling(
+    font_size = 10,
+    full_width = FALSE,
+    position = "center")
+```
 
 # Discussion
 
-## First discussion point {#sec-first-point}
+## Factors Influencing Egg Dozen Prices {#sec-influencing-factors}
 
 If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
 
-## Second discussion point
-
-Please don't use these as sub-heading labels - change them to be what your point actually is.
-
-## Third discussion point
-
-## Weaknesses and next steps
+## Weaknesses and Next Steps {#sec-nextsteps}
 
 Weaknesses and next steps should also be included.
+- combine with another dataset to get full year + more entries
 - maybe should try to specify the prev_month_avg down to also selection by vendor
 
 \newpage

@@ -21,8 +21,8 @@ library(tidyverse)
 library(arrow)
 library(here)
 library(ggplot2)
-library(modelsummary)
-library(rstanarm)
+#library(modelsummary)
+#library(rstanarm)
 library(knitr)
 library(kableExtra)
 library(jtools)
@@ -37,15 +37,15 @@ model <- readRDS(file = here("models/lm_model1.rds"))
 
 # Introduction
 
-In Toronto, a city that has an absurdly high cost of living at $1,492.10 per single person even without rent included, any area where unnecessary spending can be avoided would be greatly advantageous to know [@numbeo]. For those who are trying to save as much as they can, grocery shopping and homecooking is often a strategy employed to avoid the additional expenses of eating out. Even for people don't cook often, grocery shopping is still a monthly expense that is nearly unavoidable. Within these items, eggs are a staple grocery item that is consumed often by a wide demographic of people, with the average Canadian consuming up to 242 eggs per year [@eggfacts]. It is a cheaper source of protein than meats and a common ingredient in many dishes, making it one of the most frequently purchased grocery items.
+In Toronto, a city that has an absurdly high cost of living at $1,492.10 per single person even without rent included, any area where unnecessary spending can be avoided would be greatly advantageous to know [@numbeo]. For those who are trying to save as much as they can, grocery shopping and home cooking is often a strategy employed to avoid the additional expenses of eating out. Even for people don't cook often, grocery shopping is still a monthly expense that is nearly unavoidable. Within these items, eggs are a staple grocery item that is consumed often by a wide demographic of people, with the average Canadian consuming up to 242 eggs per year [@eggfacts]. It is a cheaper source of protein than meats and a common ingredient in many dishes, making it one of the most frequently purchased grocery items.
 
 In addition, egg production is also an important industry in Canada, with 2021's production alone totaling up to a value of $1.8 billion [@eggstats]. The pay that egg farmers receive also depends on the value of eggs on the market, with British Columbian producers in 2021 receiving the highest price of \$2.41 per dozen on average [@eggstats].
 
 Evidently, the price of eggs has crucial impact on the lives of a huge number of people, whether it be all the consumers who are purchasing eggs regularly, or the farmers who make their living by selling this product. Between these two parties is the vendors, who determine the price at which these staple food items are sold to customers for. Therefore, it would be beneficial to understand the underlying factors that determine egg pricing at various vendors.
 
-The estimand that is targetted within this paper's analysis is the price of a dozen eggs across the 8 top Canadian grocers: Voila, T&T, Loblaws, No Frills, Metro, Galleria, Walmart Canada, and Save-On-Foods. In addition to vendor, the other variables that will also be taken into consideration are each item's presale price, month of the sale, and average historical discount pricing of egg dozens, as measured by the average discounted price of eggs in the month prior to the current sale.
+The estimand that is targeted within this paper's analysis is the price of a dozen eggs across the 8 top Canadian grocers: Voila, T&T, Loblaws, No Frills, Metro, Galleria, Walmart Canada, and Save-On-Foods. In addition to vendor, the other variables that will also be taken into consideration are each item's presale price, month of the sale, and average historical discount pricing of egg dozens, as measured by the average discounted price of eggs in the month prior to the current sale.
 
-Through building a Multiple Linear Regression Model, this paper finds that all four variables had non-negligable influences on the discounted price of eggs, with a key interaction term between historical pricing and presale pricing playing a role as well. Notably, T&T and April offering the most discounted egg prices comparative to all others in their own category. As well, presale price was found to have a negative relationship with discounted price, indicating that the most expensive eggs will be discounted more, when all other variables are held constant. 
+Through building a Multiple Linear Regression Model, this paper finds that all four variables had non-negligible influences on the discounted price of eggs, with a key interaction term between historical pricing and presale pricing playing a role as well. Notably, T&T and April offering the most discounted egg prices comparative to all others in their own category. As well, presale price was found to have a negative relationship with discounted price, indicating that the most expensive eggs will be discounted more, when all other variables are held constant. 
 
 The remainder of this paper is structured as follows. @sec-data will introduce the dataset used for the analysis and the relevant variables of interest. @sec-model covers how the model was set up and its weaknesses. @sec-results displays the findings of the model, and 
 @sec-discussion elaborates further on the findings to add context as well as comment on the limitations of the current model. Within the Appendix, @sec-data-cleaning details how the full dataset was cleaned before modeling, @sec-obs-data comments on the implications of using a dataset of observational data for analysis, and @sec-model-diagnostics contains detailed diagnostics for the model.
@@ -73,11 +73,11 @@ For ease of analysis, these additional variables were derived:
 
 All entries with empty values in any of these key variables were dropped. Further details regarding the data cleaning process and a glimpse of the first 5 rows of the final cleaned dataset can be found in @sec-data-cleaning.
 
-Under the guidance of @tellingstories, the R programming language [@citeR] was used for analysis of this dataset. The package `tidyverse` [@tidyverse] was used to simulate data and test the simulated data before analysis. Packages `tidyverse` [@tidyverse] and `arrow` [@arrow] were utilized to clean the full raw dataset,  which were then also used alongside packages `testthat` [@testthat] and `here` [@here] to test the cleaned dataset. Lastly, packages `tidyverse` [@tidyverse], `rstanarm` [@rstanarm], `arrow` [@arrow], and `here` [@here] were used to build predictive models using the cleaned dataset. The package `ggplot` [@ggplot] was used for visualizing the dataset below.
+Under the guidance of @tellingstories, the R programming language [@citeR] was used for analysis of this dataset. The package `tidyverse` [@tidyverse] was used to simulate data and test the simulated data before analysis. Packages `tidyverse` [@tidyverse] and `arrow` [@arrow] were utilized to clean the full raw dataset,  which were then also used alongside packages `testthat` [@testthat] and `here` [@here] to test the cleaned dataset. Lastly, packages `tidyverse` [@tidyverse], `rstanarm` [@rstanarm], `arrow` [@arrow], `modelsummary` [@modelsummary], and `here` [@here] were used for exploratory data analysis before creating the final model. The packages `arrow` [@arrow], `here` [@here], `ggplot2` [@ggplot], `tidyverse` [@tidyverse], `jtools` [@jtools], `knitr` [@knitr], and `kableExtra` [@kableExtra] were used for visualizing the dataset and model results below.
 
 ## Measurement
 
-The observations in the dataset are scraped from the grocer's official website's interface, which means it only contains the information that is publically listed and available. The recorded prices for each item are the listed price for the "in store pick up" option, with the target pickup neighbourhood being a neighbourhood in Toronto. Certain values and listings may be missed, since the internal APIs that power the grocer's websites are not accessed and specific extracts may error for certain vendors on particular days for unforeseeable reasons. Starting from July 11, the targeted variety of grocery items for data collection was greatly increased, meaning that there may be products which are missing pricing information before then.
+The observations in the dataset are scraped from the grocer's official website's interface, which means it only contains the information that is publicly listed and available. The recorded prices for each item are the listed price for the "in store pick up" option, with the target pickup neighbourhood being a neighbourhood in Toronto. Certain values and listings may be missed, since the internal APIs that power the grocer's websites are not accessed and specific extracts may error for certain vendors on particular days for unforeseeable reasons. Starting from July 11, the targeted variety of grocery items for data collection was greatly increased, meaning that there may be products which are missing pricing information before then.
 
 ## Variables of Interest {#sec-variables}
 
@@ -183,7 +183,7 @@ analysis_data |>
        y = "Number of Sales")
 ```
 
-@fig-monthsales shows the number of sales provided on egg dozens across the months, with the least number of sales occuring in July and most in November.
+@fig-monthsales shows the number of sales provided on egg dozens across the months, with the least number of sales occurring in July and most in November.
 
 
 \newpage
@@ -248,11 +248,11 @@ $$
 Y_i = \beta_0 + \beta_1 month + \beta_2 vendor + \beta_3 old\_price * prev\_month\_avg
 $$
 
-We create the model in R [@citeR], with help from package `tidyverse` [@tidyverse].
+We create the model in R [@citeR], with help from package `tidyverse` [@tidyverse]. Model results are displayed with help from package `jtools` [@jtools].
 
 ### Model Weaknesses {#sec-model-weakness}
 
-The first weakness of this model is that it assumes a linear relationship between the discounted price and the list of predictor variables. This oversimplication could be missing many aspects of their true relationship if it is nonlinear. As well, there could be real-world events such as economic changes or policy changes which could have significant impact on pricing, but this model would fail to capture these influences. 
+The first weakness of this model is that it assumes a linear relationship between the discounted price and the list of predictor variables. This oversimplification could be missing many aspects of their true relationship if it is nonlinear. As well, there could be real-world events such as economic changes or policy changes which could have significant impact on pricing, but this model would fail to capture these influences. 
 
 Additionally, due to the targeting of dozen egg items within this analysis, it has also caused our dataset to be quite small with less than two thousand data points. Though this decision to focus in on one type of item helps narrow down the scope of analysis and increase the generalizability of findings, the small dataset size may simultaneously have the opposite effect in decreasing accuracy. 
 
@@ -275,13 +275,6 @@ Diagnostics that show the model's weaknesses can be found in @sec-model-diagnost
 #| tbl-cap: "Multiple Linear Regression Model of Discounted Egg Prices Based on Vendor, Month, Presale Price, and Previous Month's Average Discounted Price"
 #| warning: false
 
-#modelsummary(
-#  list(
-#    "Model Results" = model
-#  ),
-#  fmt = 2
-#)
-
 summ(model)
 ```
 
@@ -291,7 +284,7 @@ For the continuous variable `old_price`, we observe a negative coefficient of $-
 
 The interaction term of `old_price` with `prev_month_avg` has a slight positive coefficient, meaning that when either of these characteristics increase, current discounted price is projected to increase as well. 
 
-The $R^2$ and Adjusted $R^2$ values of 0.82 indicate that 82% of the variability in the discounted price within this dataset can be explained by the current model. 
+The $R^2$ and Adjusted $R^2$ values of 0.82 indicate that 82% of the variability in the discounted price within this dataset can be explained by the current model, which is strong evidence that these chosen variables do have influence on the estimand.
 
 
 \newpage
@@ -356,7 +349,7 @@ When translating these findings to decisions in the real world, it is important 
 
 The combination of frequency of sales with the discounted amount when considering how much benefit is actually provided to customers is a key consideration. A vendor that constantly advertises items to be "On Sale" may appear to be a good choice, but if the listed price is barely different from the original or average pricing, then this would be simply a marketing technique used by the vendor to disguise their regular price to appeal to customers without losing out on profit. This is a directly worthy of future investigation. 
 
-Frequency of sales occuring is also an important consideration because it impacts the accuracy of the model in predicting prices of eggs sold at that chain. That is, the observation that Galleria has very few sale events also has the effect that the model's accuracy when applied to Galleria listings will potentially be lower than when applied to Metro, which has a much higher number of discounts within this dataset.
+Frequency of sales occurring is also an important consideration because it impacts the accuracy of the model in predicting prices of eggs sold at that chain. That is, the observation that Galleria has very few sale events also has the effect that the model's accuracy when applied to Galleria listings will potentially be lower than when applied to Metro, which has a much higher number of discounts within this dataset.
 
 The variable `old_price`, representing an item's presale price, was found to have a negative coefficient at $-0.80$. This may be surprising at first because one would expect discounted price to increase as presale price increases. However, after taking the intercept base price into consideration, the interpretation for this coefficient makes much more sense. This result indicates that given every other variable is held constant, a greater presale price is correlated to a lower discounted price. This understanding makes much more intuitive sense, as sale events are typically calculated by percentage of the original price, meaning that a greater original price would lead to a greater decrease in price, thereby causing a greater decrease in discounted price in the end. 
 

@@ -99,7 +99,7 @@ analysis_data |>
        y = "Sale Price of a Dozen Eggs")
 ```
 
-@fig-vendorprices shows a boxplot of the sale pricing of a dozen eggs across the 8 vendors. From this graph, we can observe that T&T has the lowest prices overall and Save On Foods the highest. There are also differences in the range of prices offered, with T&T and Metro having much wider price ranges compared to Galleria and Save On Foods, which have highly consistent sale pricing. 
+@fig-vendorprices shows the summarized sale pricing of a dozen eggs across the 8 vendors. From this graph, we can observe that T&T has the lowest prices overall and Save On Foods the highest. There are also differences in the range of prices offered, with T&T and Metro having much wider price ranges compared to Galleria and Save On Foods, which have highly consistent sale pricing. 
 
 
 \newpage
@@ -175,9 +175,28 @@ Next, @fig-monthprices shows the average sale price of a dozen eggs across diffe
 #| warning: false
 #| message: false
 
-analysis_data |> 
-  ggplot(aes(x = month)) +
-  geom_bar() +
+
+
+month_sales <- analysis_data |> count(month)
+month_sales <- month_sales %>%
+  mutate(month = recode(month,
+                        Mar = 3,
+                        Apr = 4,
+                        May = 5,
+                        Jun = 6,
+                        Jul = 7,
+                        Aug = 8, 
+                        Sep = 9,
+                        Oct = 10,
+                        Nov = 11))
+
+month_sales <- month_sales[order(month_sales$month, decreasing = FALSE),]
+month_sales$month <- month.abb[month_sales$month]
+month_sales$month <- factor(month_sales$month, levels = month_sales$month)
+
+month_sales |> 
+  ggplot(mapping = aes(x = month, y = n)) +
+  geom_col() + 
   theme_classic() +
   labs(x = "Month",
        y = "Number of Sales")
@@ -324,6 +343,7 @@ First, we compare the vendor categories in more detail in @fig-vendors-result. V
 coeff <- c(0, 0.36, 0.83, 1.03, 1.72, 0.31, 1.13, 0.58)
 months <- c("April", "May", "June", "July", "August", "September", "October", "November")
 month_results <- data.frame(Months = months, Coefficients = coeff)
+month_results$Months <- factor(month_results$Months, levels = month_results$Months)
 
 
 month_results |>

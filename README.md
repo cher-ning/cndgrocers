@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains all files needed to generate the graphs and pdf for the paper *Impacts of Month, Grocery Vendor, Presale Prices, and Historical Pricing on Discounted Egg Dozen Prices*.
+This repository contains all files needed to generate the graphs and pdf for the paper *Impacts of Month, Grocery Vendor, Presale Prices, and Average Historical Pricing on Discounted Egg Dozen Prices*.
 
 Some of the code used to create this work was adapted from Alexander (2023).
 

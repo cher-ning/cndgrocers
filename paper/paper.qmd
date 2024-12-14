@@ -1,6 +1,6 @@
 ---
-title: "Impacts of Month, Grocery Vendor, Presale Prices, and Historical Pricing on Discounted Egg Dozen Prices"
-subtitle: "Cheapest Discounted Prices Are Offered by T&T or in April, by Multiple Linear Regression"
+title: "Impacts of Month, Grocery Vendor, Presale Prices, and Average Historical Pricing on Discounted Egg Dozen Prices"
+subtitle: "Cheapest Discounted Prices Are Offered by T&T and in April, by Multiple Linear Regression"
 author: Cher Ning-Li
 thanks: "Code and data are available at: [https://github.com/cher-ning/cndgrocers](https://github.com/cher-ning/cndgrocers)."
 date: today
@@ -21,8 +21,6 @@ library(tidyverse)
 library(arrow)
 library(here)
 library(ggplot2)
-#library(modelsummary)
-#library(rstanarm)
 library(knitr)
 library(kableExtra)
 library(jtools)
@@ -41,7 +39,7 @@ In Toronto, a city that has an absurdly high cost of living at $1,492.10 per sin
 
 In addition, egg production is also an important industry in Canada, with 2021's production alone totaling up to a value of $1.8 billion [@eggstats]. The pay that egg farmers receive also depends on the value of eggs on the market, with British Columbian producers in 2021 receiving the highest price of \$2.41 per dozen on average [@eggstats].
 
-Evidently, the price of eggs has crucial impact on the lives of a huge number of people, whether it be all the consumers who are purchasing eggs regularly, or the farmers who make their living by selling this product. Between these two parties is the vendors, who determine the price at which these staple food items are sold to customers for. Therefore, it would be beneficial to understand the underlying factors that determine egg pricing at various vendors.
+Evidently, the price of eggs impacts the lives of a huge number of people, whether it be all the consumers who are purchasing eggs regularly, or the farmers who make their living by selling this product. Between these two parties is the vendors, who determine the price at which these staple food items are sold to customers for. Therefore, it would be beneficial to understand the underlying factors that determine egg pricing at various vendors.
 
 The estimand that is targeted within this paper's analysis is the price of a dozen eggs across the 8 top Canadian grocers: Voila, T&T, Loblaws, No Frills, Metro, Galleria, Walmart Canada, and Save-On-Foods. In addition to vendor, the other variables that will also be taken into consideration are each item's presale price, month of the sale, and average historical discount pricing of egg dozens, as measured by the average discounted price of eggs in the month prior to the current sale.
 
@@ -56,7 +54,7 @@ The remainder of this paper is structured as follows. @sec-data will introduce t
 
 The dataset used for this paper's analysis is titled "Canadian Grocery Price Data" and was obtained from Project Hammer [@projecthammer], which compiles grocery store price listings across the 8 major Canadian Grocers—Voila, T&T, Loblaws, No Frills, Metro, Galleria, Walmart, and Save-On-Foods. The dataset contains data starting from February 28, 2024 and is updated regularly with the addition of new entries. Only the entries up until November 25, 2024 are considered within this paper.
 
-The dataset was downloaded as two separate csv files titled `hammer-4-product.csv` and `hammer-4-raw.csv`. The `product` table includes information about specific products that are available across the different grocers, with unique product ID numbers to identify each listing at each grocer. The `raw` table includes the price and more time-specific information regarding each product's listing. The two tables were joined by matching the product IDs to create the full dataset, a comprehensive table where each entry holds all the necessary product and listing information. 
+The dataset was downloaded as two separate csv files titled `hammer-4-product.csv` and `hammer-4-raw.csv`. The `product` table includes information about specific products that are available across the different grocers, with unique product ID numbers to identify each listing at each grocer. The `raw` table includes the price and more time-specific information regarding each product's listing. The two tables were joined by matching the product IDs to create the full dataset. 
 
 The relevant variables of interest to us are: `nowtime`, `vendor`, `current_price`, `old_price`, and `product_name`, as explained below:
 
